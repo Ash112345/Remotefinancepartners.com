@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy &amp; Cookie Policy — Remote Finance Partners</title>
+  <meta name="description" content="Privacy and Cookie Policy for Remote Finance Partners, a trading name of Brilserve Ltd." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:     #0B1F3B;
+      --steel:    #123A63;
+      --green:    #1F6F54;
+      --green-dk: #175a43;
+      --sage:     #D7E7DD;
+      --white:    #FFFFFF;
+      --offwhite: #F2F5F8;
+      --slate:    #303F4A;
+      --muted:    #6B7280;
+      --border:   #DDE3EA;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--slate);
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+    }
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: all 0.15s;
+    }
+    .nav-back:hover {
+      color: var(--navy);
+      border-color: var(--navy);
+    }
+
+    /* HERO STRIP */
+    .page-hero {
+      background: var(--navy);
+      padding: 64px 0 56px;
+    }
+    .page-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .page-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .page-label::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--green);
+    }
+    .page-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .page-meta {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* CONTENT */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--offwhite);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--green);
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin-bottom: 64px;
+    }
+    .toc-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+    .toc-list a {
+      font-size: 0.875rem;
+      color: var(--muted);
+      transition: color 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .toc-list a::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+    .toc-list a:hover { color: var(--navy); }
+
+    /* SECTION DIVIDER */
+    .doc-divider {
+      border: none;
+      border-top: 2px solid var(--navy);
+      margin: 72px 0 56px;
+    }
+
+    /* HEADINGS */
+    .doc-section {
+      margin-bottom: 48px;
+    }
+    .doc-section-anchor {
+      display: block;
+      padding-top: 24px;
+      margin-top: -24px;
+    }
+    h2.doc-h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    h2.doc-h2 .section-num {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--green);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* BODY TEXT */
+    .doc-section p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .doc-section p strong {
+      color: var(--slate);
+      font-weight: 600;
+    }
+    .doc-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px 0;
+    }
+    .doc-section ul li {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+      padding: 8px 0 8px 22px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-section ul li:last-child { border-bottom: none; }
+    .doc-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 16px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+    .doc-section a {
+      color: var(--green);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .doc-section a:hover { color: var(--green-dk); }
+
+    /* HIGHLIGHT BOX */
+    .doc-highlight {
+      background: var(--sage);
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .doc-highlight p {
+      color: var(--navy);
+      font-weight: 500;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    /* PAGE TITLE FOR COOKIES SECTION */
+    h1.doc-page-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .doc-page-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #080f1e;
+      padding: 40px 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-left {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.6;
+    }
+    .footer-left a {
+      color: rgba(255,255,255,0.45);
+      transition: color 0.15s;
+    }
+    .footer-left a:hover { color: rgba(215,231,221,0.8); }
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-right a {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.15s;
+    }
+    .footer-right a:hover { color: var(--white); }
+    .footer-right svg { width: 15px; height: 15px; }
+
+    @media (max-width: 600px) {
+      .toc-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Remote Finance Partners" />
+      </a>
+      <a href="index.html" class="nav-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to site
+      </a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <p class="page-label">Legal</p>
+      <h1>Privacy &amp; Cookie Policy</h1>
+      <p class="page-meta">Last updated: April 2026 &nbsp;·&nbsp; Brilserve Limited (trading as Remote Finance Partners) · Company No. 08590849</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+      <p class="toc-title">Contents</p>
+      <ul class="toc-list">
+        <li><a href="#who-we-are">1. Who We Are</a></li>
+        <li><a href="#what-we-collect">2. What Data We Collect &amp; Why</a></li>
+        <li><a href="#retention">3. How Long We Keep Your Data</a></li>
+        <li><a href="#sharing">4. Who We Share Your Data With</a></li>
+        <li><a href="#your-rights">5. Your Rights</a></li>
+        <li><a href="#opting-out">6. Opting Out</a></li>
+        <li><a href="#security">7. Data Security</a></li>
+        <li><a href="#changes">8. Changes to This Policy</a></li>
+        <li><a href="#cookies">9. Cookie Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- ===== PRIVACY POLICY ===== -->
+
+    <div class="doc-section">
+      <span class="doc-section-anchor" id="who-we-are"></span>
+      <h2 class="doc-h2"><span class="section-num">Section 01</span>Who We Are</h2>
+      <p>The data controller responsible for your personal data is <strong>Brilserve Limited</strong>, trading as Remote Finance Partners. Registered in England and Wales, company number <strong>08590849</strong>.</p>
+      <p>Registered office: G38, Unit 4, Triangle Centre, 399 Uxbridge Road, Southall, Greater London, England, UB1 3EJ.</p>
+      <div class="doc-highlight">
+        <p>Contact us: <a href="mailto:Ash@remotefinancepartners.com">Ash@remotefinancepartners.com</a></p>
+      </div>
+      <p>We are committed to handling your data in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+    </div>
+
+    <div class="doc-section">
+      <span class="doc-section-anchor" id="what-we-collect"></span>
+      <h2 class="doc-h2"><span class="section-num">Section 02</span>What Data We Collect and Why</h2>
+      <p><strong>a) Booking a Capacity Audit</strong><br />When you click to book a call, you are directed to Google Appointment Scheduling. Information you provide (name, email, any details you include) is collected and processed by Google on our behalf. We use this data solely to arrange and conduct the call with you.</p>
+      <p><strong>b) Business development and cold outreach</strong><br />We identify and contact potential clients through professional networking platforms, primarily LinkedIn. If we have contacted you, we believe our services may be relevant to your business. The data we hold is limited to your professional contact information sourced from publicly available professional profiles.</p>
+      <div class="doc-highlight">
+        <p>Our lawful basis for this processing is <strong>Legitimate Interests</strong> (Article 6(1)(f) UK GDPR). We have assessed that our interest in promoting our services to relevant businesses is not overridden by your interests or rights.</p>
+      </div>
+      <p><strong>c) Direct contact</strong><br />If you email us, we will collect your name, email address, and any information included in your message. We use this solely to respond to your enquiry.</p>
+    </div>
+
+    <div class="doc-section">
+      <span class="doc-section-anchor" id="retention"></span>
+      <h2 class="doc-h2"><span class="section-num">Section 03</span>How Long We Keep Your Data</h2>
+      <ul>
+        <li>Booking and enquiry data: retained for up to 2 years from last contact, or until you ask us to delete it.</li>
+        <li>Cold outreach contacts: removed promptly upon request to stop contact.</li>
+        <li>Client data (once engaged): retained in line with our contractual obligations and applicable law.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <span class="doc-section-anchor" id="sharing"></span>
+      <h2 class="doc-h2"><span class="section-num">Section 04</span>Who We Share Your Data With</h2>
+      <p>We do not sell your personal data. We may share it with:</p>
+      <ul>
+        <li>Google LLC — for appointment scheduling. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+        <li>Professional advisers or service providers who assist us in running our business, under appropriate data protection agreements.</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <span class="doc-section-anchor" id="your-rights"></span>
+      <h2 class="doc-h2"><span class="section-num">Section 05</span>Your Rights</h2>
+      <p>Under UK GDPR you have the right to:</p>
+      <ul>
+        <li>Access, correct, or delete your personal data</li>
+        <li>Object to processing based on legitimate interests</li>
+        <li>Request restriction of processing</li>
+        <li>Withdraw consent where applicable</li>
+      </ul>
+      <p>To exercise any right, email <a href="mailto:Ash@remotefinancepartners.com">Ash@remotefinancepartners.com</a>. We will respond within one month.</p>
+      <p>You may also lodge a complaint with the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a> or by calling 0303 123 1113.</p>
+    </div>
+
+    <div class="doc-section">
+      <span class="doc-section-anchor" id="opting-out"></span>
+      <h2 class="doc-h2"><span class="section-num">Section 06</span>Opting Out of Marketing Contact</h2>
+      <p>If you do not wish to hear from us, simply reply to our message or email <a href="mailto:Ash@remotefinancepartners.com">Ash@remotefinancepartners.com</a> and we will remove you from our contact list promptly.</p>
+    </div>
+
+    <div class="doc-section">
+      <span class="doc-section-anchor" id="security"></span>
+      <h2 class="doc-h2"><span class="section-num">Section 07</span>Data Security</h2>
+      <p>We take reasonable steps to protect your personal data from unauthorised access, loss, or misuse. Communications are conducted via secured email channels.</p>
+    </div>
+
+    <div class="doc-section">
+      <span class="doc-section-anchor" id="changes"></span>
+      <h2 class="doc-h2"><span class="section-num">Section 08</span>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The date at the top of this page will reflect the latest revision. Continued use of our website after any update constitutes acceptance of the revised policy.</p>
+    </div>
+
+    <!-- ===== COOKIE POLICY ===== -->
+
+    <hr class="doc-divider" />
+
+    <h1 class="doc-page-h1">Cookie Policy</h1>
+    <p class="doc-page-meta">Last updated: April 2026</p>
+
+    <div class="doc-section">
+      <span class="doc-section-anchor" id="cookies"></span>
+      <h2 class="doc-h2"><span class="section-num">Section 09a</span>What Are Cookies?</h2>
+      <p>Cookies are small text files placed on your device when you visit a website. They help the site function and may remember your preferences or actions.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="doc-h2"><span class="section-num">Section 09b</span>Cookies We Use</h2>
+      <div class="doc-highlight">
+        <p>Our website does not use tracking or analytics cookies. We do not run Google Analytics or any advertising cookies.</p>
+      </div>
+      <p>When you click to book a call, you are redirected to Google Appointment Scheduling. Google may set its own cookies as part of that service — these are outside our direct control. You can review how Google uses cookies at <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">policies.google.com/technologies/cookies</a>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="doc-h2"><span class="section-num">Section 09c</span>Essential Cookies</h2>
+      <p>Some cookies may be set automatically by your browser or our hosting provider to ensure the website functions correctly (for example, session or security cookies). These are strictly necessary and cannot be disabled without affecting how the site works.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="doc-h2"><span class="section-num">Section 09d</span>Managing Cookies</h2>
+      <p>You can control and delete cookies through your browser settings. For guidance, visit <a href="https://www.allaboutcookies.org" target="_blank" rel="noopener">allaboutcookies.org</a>.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2 class="doc-h2"><span class="section-num">Section 09e</span>Contact</h2>
+      <p>Questions about our use of cookies or this policy? Email us at <a href="mailto:Ash@remotefinancepartners.com">Ash@remotefinancepartners.com</a> — we'll respond within one month.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        Remote Finance Partners is a trading name of <strong style="color:rgba(255,255,255,0.5)">Brilserve Limited</strong> · Company No. 08590849 · Registered in England &amp; Wales<br />
+        Powered by <a href="https://financeadmin.net" target="_blank" rel="noopener">financeadmin.net</a>
+      </div>
+      <div class="footer-right">
+        <a href="index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          Back to main site
+        </a>
+        <a href="https://www.linkedin.com/company/remote-finance-partners/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
