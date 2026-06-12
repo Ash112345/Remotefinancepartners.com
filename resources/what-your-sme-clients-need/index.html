@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What Your SME Clients Need Done and Who Can Do It — Remote Finance Partners</title>
+<meta name="description" content="Most accountants working with SME clients will recognise this pattern. The client is capable and well-intentioned, but their books are consistently behind. Here's the fix." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --navy:#0B1F3B; --green:#1F6F54; --green-dk:#175a43; --sage:#D7E7DD; --off:#F2F5F8;
+  --slate:#303F4A; --muted:#6B7280; --border:#DDE3EA; --white:#fff;
+  --fd:'Playfair Display', Georgia, serif; --fb:'DM Sans', system-ui, sans-serif;
+  --r:8px; --rl:16px; --sh:0 8px 30px rgba(11,31,59,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:16px;line-height:1.7;color:var(--slate);background:var(--white);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+#nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{display:inline-flex;align-items:center;color:var(--navy)}
+.logo img{height:70px;width:auto;display:block}
+.nav-links{display:flex;gap:22px;list-style:none;align-items:center}
+.nav-links a{font-size:.94rem;color:var(--slate)}
+.nav-links a.active{color:var(--green);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;transition:.2s ease;border:1px solid transparent;min-height:48px}
+.btn-outline{border-color:var(--border);color:var(--navy);background:#fff}
+.btn-outline:hover{border-color:var(--navy)}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-dk)}
+.btn-secondary{border:1px solid rgba(255,255,255,.28);color:#fff;background:transparent}
+.btn-secondary:hover{background:rgba(255,255,255,.08)}
+
+/* Article header */
+.article-header{padding:72px 0 0;border-bottom:1px solid var(--border)}
+.article-header .wrap{max-width:760px}
+.breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--green)}
+.breadcrumb a:hover{text-decoration:underline}
+.article-tag{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.article-header h1{font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:var(--navy);margin-bottom:18px}
+.article-header .standfirst{font-size:1.08rem;color:var(--slate);max-width:60ch;line-height:1.65;margin-bottom:40px}
+
+/* Hero image */
+.article-image{max-width:760px;margin:40px auto 0;border-radius:var(--rl);overflow:hidden;}
+.article-image img{width:100%;height:auto;display:block}
+
+/* Article body */
+.article-body{max-width:720px;margin:0 auto;padding:64px 24px 80px}
+.article-body p{margin-bottom:22px;font-size:1.02rem;line-height:1.78}
+.article-body h2{font-family:var(--fd);font-size:1.6rem;color:var(--navy);margin:44px 0 16px;line-height:1.2}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin:32px 0 12px}
+.article-body ul{margin:0 0 24px 0;list-style:none}
+.article-body ul li{font-size:1.02rem;padding:10px 14px 10px 18px;border-left:3px solid var(--green);margin-bottom:10px;background:var(--off);border-radius:0 var(--r) var(--r) 0}
+.article-body ul li strong{color:var(--navy)}
+.article-body blockquote{border-left:4px solid var(--green);padding:16px 20px;background:var(--off);border-radius:0 var(--r) var(--r) 0;margin:32px 0;font-family:var(--fd);font-size:1.2rem;line-height:1.5;color:var(--navy)}
+.article-body a{color:var(--green);text-decoration:underline}
+
+/* CTA strip */
+.article-cta{background:var(--navy);border-radius:24px;padding:48px;margin:0 24px 80px}
+.article-cta h2{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;color:#fff;margin-bottom:12px}
+.article-cta p{max-width:54ch;color:rgba(255,255,255,.82);margin-bottom:24px}
+.article-cta small{display:block;margin-top:14px;color:rgba(255,255,255,.55)}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Footer */
+footer{padding:28px 0 50px}
+.foot{display:flex;justify-content:space-between;gap:20px;padding-top:22px;border-top:1px solid var(--border);font-size:.95rem;color:var(--muted)}
+
+@media(max-width:960px){.nav-links{display:none}}
+@media(max-width:640px){
+  .article-header{padding:56px 0 0}
+  .article-cta{padding:32px 20px;margin:0 0 64px}
+  .foot{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="/" class="logo"><img src="/logo.png" alt="Remote Finance Partners logo"></a>
+    <ul class="nav-links">
+      <li><a href="/#problem">The Problem</a></li>
+      <li><a href="/#services">What We Do</a></li>
+      <li><a href="/#delivery">How It Works</a></li>
+      <li><a href="/resources/" class="active">Resources</a></li>
+      <li><a href="/for-smes/">For SMEs</a></li>
+    </ul>
+    <a class="btn btn-outline" href="https://calendar.app.google/vX7iZkf71CKgZ4RVA">Book a Free Audit</a>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/resources/">← Resources</a></div>
+    <div class="article-tag">Practice Management</div>
+    <h1>What Your SME Clients Need Done and Who Can Do It</h1>
+    <p class="standfirst">The client is capable and well-intentioned, but their books are consistently behind. By the time the work reaches you, there's a catch-up job to do before the actual accountancy can begin.</p>
+  </div>
+  <div class="article-image">
+    <img src="/resources/what-your-sme-clients-need/what-your-sme-clients-need-hero.png" alt="What Your SME Clients Need Done — Remote Finance Partners" />
+  </div>
+</header>
+
+<article class="article-body">
+
+  <h2>The problem lands on your desk, even when it isn't your job</h2>
+
+  <p>Most accountants working with SME clients will recognise this pattern. The client is capable and well-intentioned, but their books are consistently behind. Bank feeds uncoded, VAT figures unclear, payroll queries handled informally. By the time the work reaches you, there's a catch-up job to do before the actual accountancy can begin.</p>
+
+  <p>That catch-up either sits with you, absorbing time that should be chargeable at a higher rate, or it sits with the client, who doesn't have the skills to do it cleanly. Either way, it slows everything down and creates friction in the relationship.</p>
+
+  <h2>What the client actually needs underneath</h2>
+
+  <p>The gap for most SME clients isn't the accountant. It's the layer of structured, consistent admin that sits between their day-to-day business activity and the numbers you work with. Specifically:</p>
+
+  <ul>
+    <li><strong>Bookkeeping.</strong> Day-to-day transaction recording, coding, and categorisation done consistently and to a standard you can rely on.</li>
+    <li><strong>Bank reconciliations.</strong> Regular reconciliation of bank feeds so the ledger reflects reality, not a version of it from six weeks ago.</li>
+    <li><strong>VAT support.</strong> Preparation and organisation of VAT records ahead of each return, so the figures are clean before they reach you for review.</li>
+    <li><strong>Payroll support.</strong> Processing, records, and compliance admin handled systematically, without the client managing it informally.</li>
+    <li><strong>Accounts admin.</strong> Document organisation, filing, invoice tracking, and the general administrative layer that keeps the numbers accurate and accessible.</li>
+  </ul>
+
+  <p>None of this is your job. But when it isn't being done properly, it becomes your problem.</p>
+
+  <h2>A resource you can refer clients to without taking on the management yourself</h2>
+
+  <p>RFP works directly with SME clients on the operational bookkeeping layer, the work that needs to happen between the business and your desk. We handle it through a structured, managed setup: documented processes, consistent team, regular output, and a clear review standard that you set.</p>
+
+  <p>You stay in control of the relationship and the review. We take care of the execution underneath. The client gets consistent, reliable bookkeeping support without needing to manage a freelancer or muddle through themselves. You get cleaner data, less pre-work, and a client who is easier to service.</p>
+
+  <p>If you have clients where the bookkeeping is the recurring friction point, this is a straightforward fix, and one that does not add to your management overhead.</p>
+
+</article>
+
+<div class="wrap" style="max-width:768px">
+  <div class="article-cta">
+    <div style="font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9fd5b9;margin-bottom:14px">Want to Talk Through Whether This Fits a Client?</div>
+    <h2>Book a free 30-minute call and we can look at what a referral arrangement might look like in practice.</h2>
+    <p>What we'd handle, what stays with you, and whether the model is a good fit for the clients you have in mind.</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="https://calendar.app.google/vX7iZkf71CKgZ4RVA">Book a Call</a>
+      <a class="btn btn-secondary" href="mailto:Ash@remotefinancepartners.com">Email Ash Directly</a>
+    </div>
+    <small>A straight conversation. If we are not the right fit, we will say so.</small>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div><img src="/logo.png" alt="Remote Finance Partners logo" style="height:60px;width:auto;"></div>
+    <div><a href="/privacy.html" style="margin-right:16px;color:inherit;">Privacy Policy</a>A trading name of Brilserve Ltd · Company No. 08590849 · Registered in England &amp; Wales</div>
+  </div>
+</footer>
+
+</body>
+</html>
