@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Why Accountancy Outsourcing Fails for Local Practices - Remote Finance Partners</title>
+<meta name="description" content="94% of UK accountancy firms say recruitment issues are holding back growth. Outsourcing is increasingly necessary - but it fails local practices for five specific, fixable reasons." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --navy:#0B1F3B; --green:#1F6F54; --green-dk:#175a43; --sage:#D7E7DD; --off:#F2F5F8;
+  --slate:#303F4A; --muted:#6B7280; --border:#DDE3EA; --white:#fff;
+  --fd:'Playfair Display', Georgia, serif; --fb:'DM Sans', system-ui, sans-serif;
+  --r:8px; --rl:16px; --sh:0 8px 30px rgba(11,31,59,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:16px;line-height:1.7;color:var(--slate);background:var(--white);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+#nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{display:inline-flex;align-items:center;color:var(--navy)}
+.logo img{height:70px;width:auto;display:block}
+.nav-links{display:flex;gap:22px;list-style:none;align-items:center}
+.nav-links a{font-size:.94rem;color:var(--slate)}
+.nav-links a.active{color:var(--green);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;transition:.2s ease;border:1px solid transparent;min-height:48px}
+.btn-outline{border-color:var(--border);color:var(--navy);background:#fff}
+.btn-outline:hover{border-color:var(--navy)}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-dk)}
+.btn-secondary{border:1px solid rgba(255,255,255,.28);color:#fff;background:transparent}
+.btn-secondary:hover{background:rgba(255,255,255,.08)}
+
+/* Article header */
+.article-header{padding:72px 0 0;border-bottom:1px solid var(--border)}
+.article-header .wrap{max-width:760px}
+.breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--green)}
+.breadcrumb a:hover{text-decoration:underline}
+.article-tag{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.article-header h1{font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:var(--navy);margin-bottom:18px}
+.article-header .standfirst{font-size:1.08rem;color:var(--slate);max-width:60ch;line-height:1.65;margin-bottom:40px}
+
+/* Hero image */
+.article-image{max-width:760px;margin:40px auto 0;border-radius:var(--rl);overflow:hidden;}
+.article-image img{width:100%;height:auto;display:block}
+
+/* Article body */
+.article-body{max-width:720px;margin:0 auto;padding:64px 24px 80px}
+.article-body p{margin-bottom:22px;font-size:1.02rem;line-height:1.78}
+.article-body h2{font-family:var(--fd);font-size:1.6rem;color:var(--navy);margin:44px 0 16px;line-height:1.2}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin:32px 0 12px}
+.article-body ul{margin:0 0 24px 0;list-style:none}
+.article-body ul li{font-size:1.02rem;padding:10px 14px 10px 18px;border-left:3px solid var(--green);margin-bottom:10px;background:var(--off);border-radius:0 var(--r) var(--r) 0}
+.article-body blockquote{border-left:4px solid var(--green);padding:16px 20px;background:var(--off);border-radius:0 var(--r) var(--r) 0;margin:32px 0;font-family:var(--fd);font-size:1.2rem;line-height:1.5;color:var(--navy)}
+.article-body a{color:var(--green);text-decoration:underline}
+
+/* RFP callout box */
+.rfp-callout{background:var(--sage);border-radius:var(--rl);padding:28px 32px;margin:32px 0}
+.rfp-callout-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.rfp-callout p{font-size:.98rem;line-height:1.72;color:var(--slate);margin-bottom:0}
+.rfp-callout p + p{margin-top:12px}
+
+/* Stats row */
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;margin:32px 0}
+.stat-cell{background:var(--off);padding:24px 20px;text-align:center}
+.stat-num{font-family:var(--fd);font-size:2rem;font-weight:700;color:var(--green);line-height:1;margin-bottom:6px}
+.stat-label{font-size:.82rem;color:var(--muted);line-height:1.4}
+
+/* CTA strip */
+.article-cta{background:var(--navy);border-radius:24px;padding:48px;margin:0 24px 80px}
+.article-cta h2{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;color:#fff;margin-bottom:12px}
+.article-cta p{max-width:54ch;color:rgba(255,255,255,.82);margin-bottom:24px}
+.article-cta small{display:block;margin-top:14px;color:rgba(255,255,255,.55)}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Footer */
+footer{padding:28px 0 50px}
+.foot{display:flex;justify-content:space-between;gap:20px;padding-top:22px;border-top:1px solid var(--border);font-size:.95rem;color:var(--muted)}
+
+@media(max-width:960px){.nav-links{display:none}}
+@media(max-width:640px){
+  .article-header{padding:56px 0 0}
+  .article-cta{padding:32px 20px;margin:0 0 64px}
+  .rfp-callout{padding:22px 20px}
+  .foot{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="/" class="logo"><img src="/logo.png" alt="Remote Finance Partners logo"></a>
+    <ul class="nav-links">
+      <li><a href="/#problem">The Problem</a></li>
+      <li><a href="/#services">What We Do</a></li>
+      <li><a href="/#delivery">How It Works</a></li>
+      <li><a href="/resources/" class="active">Resources</a></li>
+      <li><a href="/for-smes/">For SMEs</a></li>
+    </ul>
+    <a class="btn btn-outline" href="https://calendar.app.google/vX7iZkf71CKgZ4RVA">Book a Free Audit</a>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/resources/">← Resources</a></div>
+    <div class="article-tag">Outsourcing</div>
+    <h1>Why Accountancy Outsourcing Fails for Local Practices - and What Actually Fixes It</h1>
+    <p class="standfirst">Local practices aren't outsourcing because it's fashionable. They're outsourcing because the talent market has left them with little alternative. The question is why it so often fails at their level specifically.</p>
+  </div>
+  <div class="article-image">
+    <img src="/resources/why-outsourcing-fails/outsourcing-fails-hero.png" alt="Why Accountancy Outsourcing Fails for Local Practices - Remote Finance Partners" />
+  </div>
+</header>
+
+<article class="article-body">
+
+  <h2>The Pressure to Outsource Is Real</h2>
+
+  <div class="stats-row">
+    <div class="stat-cell">
+      <div class="stat-num">94%</div>
+      <div class="stat-label">of UK accountancy firms say recruitment issues are holding back growth</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">74%</div>
+      <div class="stat-label">are unable to take on new clients due to staffing constraints</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">40%</div>
+      <div class="stat-label">increase in small practices since 2018, competing for the same shrinking talent pool</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">30%</div>
+      <div class="stat-label">of firms have more professionals approaching retirement than entering the profession</div>
+    </div>
+  </div>
+
+  <p>Regional practices report recruitment timelines lengthened by 40–60 days compared to pre-2020 levels, with many positions remaining unfilled for months. The talent shortage is most acute outside major metropolitan areas.</p>
+
+  <p>These pressures fall hardest on the smallest firms. A single unfilled role at a 3-partner practice is a capacity crisis. At a mid-tier firm, it is a line in an HR report. Outsourcing is not a lifestyle choice for local practices. It is increasingly a necessity. The question is why it so often fails at their level specifically.</p>
+
+  <h2>Failure Point 1 - They go in without processes, so the outsourcer amplifies the chaos</h2>
+
+  <p>Outsourcing doesn't fix broken internal processes. It amplifies them. The offshore team's work may be technically correct, but it doesn't match the firm's internal workflow, expectations, or review structure. Firms with documented handover processes report up to 40% fewer rework incidents with offshore teams.</p>
+
+  <p>The problem is that local 1–5 partner practices almost never have documented SOPs before they outsource. Their processes live in the partner's head, built on trust and habit with a small in-house team. When they hand work to an offshore team, there is nothing to hand over. The outsourcer is left guessing, and rework follows.</p>
+
+  <div class="rfp-callout">
+    <div class="rfp-callout-label">How RFP handles this differently</div>
+    <p>Most outsourcers hand you a generic onboarding pack and leave you to figure out the rest. We build the processes with you (not for you, with you) before any work begins. Your workflows, your naming conventions, your review structure, captured in SOPs that actually reflect how your firm operates. It only has to happen once.</p>
+    <p>Throughout the engagement, you have two points of contact: Ash for quality and relationship, and a dedicated operational lead for day-to-day coordination. You're never left managing the outsourcer on top of managing the work. And if you ever decide to leave, the SOPs are yours to keep.</p>
+  </div>
+
+  <h2>Failure Point 2 - The handover is treated as a one-off, not a system</h2>
+
+  <p>Even when a firm has decent internal processes, the client-level handover is where things quietly fall apart. Incomplete documentation, missing prior year references, and assumed local knowledge: UK-specific tax treatments or client quirks that feel obvious to the partner who has handled the account for years. All of these create gaps the offshore team has no way to fill.</p>
+
+  <blockquote>A firm-level SOP isn't enough. Each client file needs its own context: history, known issues, preferred formats, recurring exceptions.</blockquote>
+
+  <p>Without it, quality degrades quickly, especially on more complex SME accounts.</p>
+
+  <div class="rfp-callout">
+    <div class="rfp-callout-label">How RFP handles this differently</div>
+    <p>Most outsourcing relationships have no feedback loop. Problems happen, get fixed quietly, and repeat the following year. We work differently. You get daily updates on work completed, so you always know where things stand. Weekly catch-ups mean nothing drifts and small issues are caught before they become rework. When something does go wrong, we record it, fix it, and build it into the process. Solved once. Not again and again.</p>
+    <p>Over time, this creates something most firms never have with an outsourcer: institutional memory. Every issue makes the system better. Every year runs smoother than the last.</p>
+  </div>
+
+  <h2>Failure Point 3 - They choose on price and get what they pay for</h2>
+
+  <p>When firms evaluate outsourcing options, price is usually the first filter. It's an understandable shortcut. Hourly rates are easy to compare, and everything else is harder to quantify. The problem is that the rate tells you almost nothing about the real cost of the engagement.</p>
+
+  <p>An unmanaged offshore team with no structured handover, no UK-side oversight, and no feedback loop will generate rework, partner time, and frustration that never shows up on the invoice. The cheap option becomes expensive quickly.</p>
+
+  <blockquote>The right question isn't "what is the hourly rate?" It's "what does the model look like?"</blockquote>
+
+  <p>Who manages the relationship? How is quality controlled? What happens when something goes wrong? Firms that choose on rate alone rarely ask those questions until it's too late.</p>
+
+  <div class="rfp-callout">
+    <div class="rfp-callout-label">How RFP handles this differently</div>
+    <p>The structure described across these failure points (built processes, client-level briefing documents, daily updates, weekly catch-ups, UK-side account management, dedicated pods) is what determines whether outsourcing works. The rate is secondary to all of it. When the model is right, the value takes care of itself.</p>
+  </div>
+
+  <h2>Failure Point 4 - No UK-side account management means nobody owns the relationship</h2>
+
+  <p>When a local practice outsources directly to an offshore team, the partner becomes the de facto account manager on top of everything else they already do. Queries pile up in a WhatsApp group. Deadlines slip. The partner ends up pulling work back in-house out of frustration and writes the whole experiment off as a failure.</p>
+
+  <p>This isn't outsourcing failing. It's unsupported outsourcing failing. The partner's job is to review output, not manage a remote team.</p>
+
+  <div class="rfp-callout">
+    <div class="rfp-callout-label">How RFP handles this differently</div>
+    <p>RFP runs on a managed model, which means the coordination burden never lands on you. On the UK side, you have Ash, your main point of contact for quality, relationship, and anything that needs escalating. On the offshore side, a dedicated operational lead manages the day-to-day running of your work. Between the two, nothing falls through the gap.</p>
+    <p>Work is structured in pods: small, consistent teams assigned to your files rather than a rotating pool of anonymous staff. The same people work your accounts, build familiarity with your clients, and take ownership of quality over time.</p>
+  </div>
+
+  <h2>Failure Point 5 - They try to outsource everything at once</h2>
+
+  <p>The big-bang approach is one of the most common ways outsourcing fails. A firm hands over a large volume of client work immediately, before any feedback loop exists, before quality rhythms are established, before anyone knows what good looks like in this particular relationship.</p>
+
+  <p>Errors compound across multiple clients simultaneously. By the time the pattern becomes clear, the damage is already spread across the book. The right model is the opposite: start with lower-risk, repeatable work, establish the review rhythm, build the feedback loop, then scale.</p>
+
+  <div class="rfp-callout">
+    <div class="rfp-callout-label">How RFP handles this differently</div>
+    <p>We start with a pilot. One or two clients, defined scope, enough to assess quality, communication, and turnaround before anything expands. You only pay if you're happy with the work. A pilot protects you, but it also protects the relationship. It gives us time to align on standards, surface any gaps, and build the working rhythm before volume increases. When you scale, you're scaling something that already works.</p>
+  </div>
+
+  <h2>The Pattern Underneath All Five Failures</h2>
+
+  <p>The mid-tier firms that outsource successfully do so because they already have infrastructure: workflow managers, compliance checklists, review hierarchies, and procurement discipline. Local practices have none of this. They're not failing at outsourcing. They're attempting an enterprise-grade solution without enterprise-grade scaffolding.</p>
+
+  <p>RFP exists to close that gap. The named lead, the team behind the lead, the documented processes, the pilot, the feedback loop: that's the scaffolding. Built for firms that don't have it yet, and shouldn't have to build it alone.</p>
+
+  <p>For local practices that want to grow (or even stand still) the real conversation is about shifting toward advisory work. That's the subject of our next piece.</p>
+
+</article>
+
+<div class="wrap" style="max-width:768px">
+  <div class="article-cta">
+    <div style="font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9fd5b9;margin-bottom:14px">Ready to Explore a Better Model?</div>
+    <h2>Book a free audit and we'll show you what a sensible first month could look like.</h2>
+    <p>We'll map where partner time is going, identify what should move out of the partner layer, and walk you through how a pilot would work. Straightforward, practical, no pressure.</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="https://calendar.app.google/vX7iZkf71CKgZ4RVA">Book a Free Audit</a>
+      <a class="btn btn-secondary" href="mailto:Ash@remotefinancepartners.com">Email Ash Directly</a>
+    </div>
+    <small>A straight conversation. If we are not the right fit, we will say so.</small>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div><img src="/logo.png" alt="Remote Finance Partners logo" style="height:60px;width:auto;"></div>
+    <div><a href="/privacy.html" style="margin-right:16px;color:inherit;">Privacy Policy</a>A trading name of Brilserve Ltd · Company No. 08590849 · Registered in England &amp; Wales</div>
+  </div>
+</footer>
+
+</body>
+</html>
