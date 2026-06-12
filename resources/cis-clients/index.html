@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CIS Clients: Why They Cost You More Than You Think — Remote Finance Partners</title>
+<meta name="description" content="Most practices price CIS clients like standard limited company clients. They're not, and since April 2026, the gap between what you charge them and what they actually cost you just got wider." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --navy:#0B1F3B; --green:#1F6F54; --green-dk:#175a43; --sage:#D7E7DD; --off:#F2F5F8;
+  --slate:#303F4A; --muted:#6B7280; --border:#DDE3EA; --white:#fff;
+  --fd:'Playfair Display', Georgia, serif; --fb:'DM Sans', system-ui, sans-serif;
+  --r:8px; --rl:16px; --sh:0 8px 30px rgba(11,31,59,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:16px;line-height:1.7;color:var(--slate);background:var(--white);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+#nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{display:inline-flex;align-items:center;color:var(--navy)}
+.logo img{height:70px;width:auto;display:block}
+.nav-links{display:flex;gap:22px;list-style:none;align-items:center}
+.nav-links a{font-size:.94rem;color:var(--slate)}
+.nav-links a.active{color:var(--green);font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;transition:.2s ease;border:1px solid transparent;min-height:48px}
+.btn-outline{border-color:var(--border);color:var(--navy);background:#fff}
+.btn-outline:hover{border-color:var(--navy)}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-dk)}
+.btn-secondary{border:1px solid rgba(255,255,255,.28);color:#fff;background:transparent}
+.btn-secondary:hover{background:rgba(255,255,255,.08)}
+
+/* Article header */
+.article-header{padding:72px 0 0;border-bottom:1px solid var(--border)}
+.article-header .wrap{max-width:760px}
+.breadcrumb{font-size:.85rem;color:var(--muted);margin-bottom:22px}
+.breadcrumb a{color:var(--green)}
+.breadcrumb a:hover{text-decoration:underline}
+.article-tag{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.article-header h1{font-family:var(--fd);font-size:clamp(2rem,4vw,3rem);line-height:1.1;color:var(--navy);margin-bottom:18px}
+.article-header .standfirst{font-size:1.08rem;color:var(--slate);max-width:60ch;line-height:1.65;margin-bottom:40px}
+
+/* Hero image */
+.article-image{max-width:760px;margin:40px auto 0;border-radius:var(--rl);overflow:hidden;}
+.article-image img{width:100%;height:auto;display:block}
+
+/* Article body */
+.article-body{max-width:720px;margin:0 auto;padding:64px 24px 80px}
+.article-body p{margin-bottom:22px;font-size:1.02rem;line-height:1.78}
+.article-body h2{font-family:var(--fd);font-size:1.6rem;color:var(--navy);margin:44px 0 16px;line-height:1.2}
+.article-body h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin:32px 0 12px}
+.article-body ul{margin:0 0 24px 0;list-style:none}
+.article-body ul li{font-size:1.02rem;padding:10px 14px 10px 18px;border-left:3px solid var(--green);margin-bottom:10px;background:var(--off);border-radius:0 var(--r) var(--r) 0}
+.article-body blockquote{border-left:4px solid var(--green);padding:16px 20px;background:var(--off);border-radius:0 var(--r) var(--r) 0;margin:32px 0;font-family:var(--fd);font-size:1.2rem;line-height:1.5;color:var(--navy)}
+.article-body a{color:var(--green);text-decoration:underline}
+
+/* CTA strip */
+.article-cta{background:var(--navy);border-radius:24px;padding:48px;margin:0 24px 80px}
+.article-cta h2{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;color:#fff;margin-bottom:12px}
+.article-cta p{max-width:54ch;color:rgba(255,255,255,.82);margin-bottom:24px}
+.article-cta small{display:block;margin-top:14px;color:rgba(255,255,255,.55)}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Footer */
+footer{padding:28px 0 50px}
+.foot{display:flex;justify-content:space-between;gap:20px;padding-top:22px;border-top:1px solid var(--border);font-size:.95rem;color:var(--muted)}
+
+@media(max-width:960px){.nav-links{display:none}}
+@media(max-width:640px){
+  .article-header{padding:56px 0 0}
+  .article-cta{padding:32px 20px;margin:0 0 64px}
+  .foot{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="/" class="logo"><img src="/logo.png" alt="Remote Finance Partners logo"></a>
+    <ul class="nav-links">
+      <li><a href="/#problem">The Problem</a></li>
+      <li><a href="/#services">What We Do</a></li>
+      <li><a href="/#delivery">How It Works</a></li>
+      <li><a href="/resources/" class="active">Resources</a></li>
+      <li><a href="/for-smes/">For SMEs</a></li>
+    </ul>
+    <a class="btn btn-outline" href="https://calendar.app.google/vX7iZkf71CKgZ4RVA">Book a Free Audit</a>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/resources/">← Resources</a></div>
+    <div class="article-tag">Compliance</div>
+    <h1>CIS Clients: Why They Cost You More Than You Think</h1>
+    <p class="standfirst">For partners at 1–5 partner firms with construction clients on the books. Most practices price CIS clients like standard limited company clients. They're not, and since April 2026, the gap between what you charge them and what they actually cost you just got wider.</p>
+  </div>
+  <div class="article-image">
+    <img src="/resources/cis-clients/cis-clients-hero.png" alt="CIS Clients: Why They Cost You More Than You Think — Remote Finance Partners" />
+  </div>
+</header>
+
+<article class="article-body">
+
+  <h2>The monthly treadmill</h2>
+
+  <p>A standard ltd company client has an annual rhythm. Year-end accounts, a tax return, maybe quarterly VAT. The work clusters, you can plan for it, and your pricing roughly reflects it.</p>
+
+  <p>A CIS contractor client runs on a monthly treadmill that never stops:</p>
+
+  <ul>
+    <li><strong>Returns filed by the 19th of every month.</strong> No flexibility. Miss it and the penalty regime kicks in: £100 on day one, escalating to £300 or 5% of the liability at six months, with a further penalty at twelve. HMRC had suspended the escalation penalties as a pragmatic measure. From April 2026, they're back in full.</li>
+    <li><strong>Subcontractor verification before every payment.</strong> Not once at onboarding. Every new subcontractor, every time, a recurring task that lands whenever the client takes on someone new, which in construction is constantly.</li>
+    <li><strong>Materials vs labour split, correctly, on every invoice.</strong> HMRC scrutinises material claims. Get it wrong and the deduction is wrong, and unwinding that is hours nobody bills for.</li>
+    <li><strong>VAT reverse charge on most B2B construction transactions.</strong> Another layer your junior has to get right on every relevant invoice.</li>
+    <li><strong>Employment status checks.</strong> Get an employed-vs-self-employed call wrong and your client is looking at a retrospective tax bill with your firm's advice in the file.</li>
+  </ul>
+
+  <p>And as of 6 April 2026, there's one more: contractors must now file a nil return, or notify HMRC in advance, for every month where no subcontractor payments are made. This requirement was removed in 2015 to reduce admin burden. It's back because too many contractors ignored the inactivity requirement and ended up with penalties they shouldn't have had. The logic makes sense. But for your practice, it means every CIS client needs a monthly touchpoint even in their quiet months. The months that used to cost you nothing now cost you something.</p>
+
+  <h2>The bit that should concern you most</h2>
+
+  <p>The April changes also introduced new fraud liability rules that shift risk directly onto contractors and by extension, onto the firms advising them.</p>
+
+  <p>HMRC can now hold a contractor liable for lost tax, plus a penalty of up to 30% of that tax, where they "knew or should have known" that a transaction in their supply chain was connected to fraud. That liability can extend to company directors personally, not just the business. And if gross payment status is revoked under the new rules, the waiting period to reapply has increased from one year to five.</p>
+
+  <p>For your practice, this means your contractor clients now need documented subcontractor verification records that are audit-ready, not just verified at the time but evidenced and kept. That's not advisory work. It's a recurring, systematisable admin. And it's brand new demand that landed two months ago without any extra fee attached to it.</p>
+
+  <h2>Where the recovery leaks</h2>
+
+  <p>If a CIS client is on a fixed fee priced like a standard ltd company, every one of those monthly tasks is being absorbed by your team for free.</p>
+
+  <p>The chasing alone is brutal. Construction clients are famously hard to get records from. Invoices arrive late, subcontractor details arrive incomplete, and the 19th doesn't move. Your junior spends the second week of every month chasing, the third week scrambling, and the firm eats the difference between the time logged and the fee charged.</p>
+
+  <p>That's not a one-off. It's every month, on every CIS client, indefinitely. Multiply it across eight or ten construction clients and you're looking at a meaningful chunk of an associate's year going into work that was never priced in.</p>
+
+  <h2>What can actually be systematised</h2>
+
+  <p>Almost all of this is process work, not judgement work.</p>
+
+  <ul>
+    <li>Monthly return preparation including nil returns</li>
+    <li>Subcontractor verification tracking and audit-ready records</li>
+    <li>Invoice coding and the materials/labour split</li>
+    <li>Deduction statement management</li>
+    <li>The chasing: records, approvals, missing details</li>
+  </ul>
+
+  <p>None of that needs a qualified accountant. It needs a documented process, a team trained on it, and someone who makes sure the treadmill runs without your people on it.</p>
+
+  <p>The judgement work: employment status calls, gross payment status advice, anything HMRC might challenge, stays with you. That's the line. You keep the accountability and the client relationship. The treadmill runs in the background.</p>
+
+  <h2>What this looks like in practice</h2>
+
+  <p>We build the monthly CIS workflow once: verification log, chasing cadence, coding rules, nil return tracking, return prep checklist. Our team runs it under your brand. Your clients deal with your firm, your associates review ready-to-file returns instead of assembling them, and the 19th stops being a monthly scramble.</p>
+
+  <p>The result isn't just fewer penalties and less stress. It's that your CIS clients stop quietly eating margin that your fee never accounted for, and the new compliance burden lands on a process, not on your team.</p>
+
+</article>
+
+<div class="wrap" style="max-width:768px">
+  <div class="article-cta">
+    <div style="font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9fd5b9;margin-bottom:14px">No Obligation, No Pitch</div>
+    <h2>Just a straightforward look at how we can keep the treadmill running in the background.</h2>
+    <p>Stop the scramble on the 19th and recover the margin your CIS clients have been quietly taking.</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="https://calendar.app.google/vX7iZkf71CKgZ4RVA">Book a Call</a>
+      <a class="btn btn-secondary" href="mailto:Ash@remotefinancepartners.com">Email Ash Directly</a>
+    </div>
+    <small>A straight conversation. If we are not the right fit, we will say so.</small>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap foot">
+    <div><img src="/logo.png" alt="Remote Finance Partners logo" style="height:60px;width:auto;"></div>
+    <div><a href="/privacy.html" style="margin-right:16px;color:inherit;">Privacy Policy</a>A trading name of Brilserve Ltd · Company No. 08590849 · Registered in England &amp; Wales</div>
+  </div>
+</footer>
+
+</body>
+</html>
