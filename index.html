@@ -45,7 +45,7 @@ a{color:var(--green)}
   border-bottom:1px solid var(--border);
 }
 .nav-inner{
-  max-width:1120px;margin:0 auto;padding:14px 24px;
+  max-width:1340px;margin:0 auto;padding:14px 32px;
   display:flex;align-items:center;gap:28px;flex-wrap:wrap;
 }
 .brand{
@@ -64,10 +64,23 @@ a{color:var(--green)}
 .pill:hover{background:var(--green-dk)}
 
 /* Layout */
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-section{padding:72px 0;border-top:1px solid var(--border)}
+.wrap{max-width:1340px;margin:0 auto;padding:0 32px}
+section{padding:78px 0;border-top:1px solid var(--border)}
 section:first-of-type{border-top:0}
-.narrow{max-width:760px}
+
+/* Bands */
+.band-off{background:var(--off);border-top:0}
+.band-off + section{border-top:0}
+.band-navy{background:var(--navy);color:rgba(255,255,255,.85);border-top:0}
+.band-navy + section{border-top:0}
+.band-navy h2,.band-navy h3{color:#fff}
+.band-navy p{color:rgba(255,255,255,.85)}
+.band-navy ul.rule li{background:rgba(255,255,255,.06);border-left-color:var(--sage);color:rgba(255,255,255,.9)}
+.band-navy .lever-card{background:rgba(255,255,255,.06);border-left-color:var(--sage)}
+.band-navy .lever-card h3{color:#fff}
+.band-navy blockquote{background:rgba(255,255,255,.06);border-left-color:var(--sage);color:#fff}
+.band-navy .case-block h3{color:var(--sage)}
+.narrow{max-width:880px}
 
 /* Hero */
 .hero{padding:88px 0 76px;border-top:0}
@@ -150,7 +163,7 @@ blockquote p{margin:0;max-width:none}
 /* Footer */
 footer{border-top:1px solid var(--border);padding:30px 0 46px}
 .footer-inner{
-  max-width:1120px;margin:0 auto;padding:0 24px;
+  max-width:1340px;margin:0 auto;padding:0 32px;
   display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
 }
 .footer-logo{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--navy)}
@@ -161,7 +174,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 
 @media (max-width:880px){
   .theories,.levers{grid-template-columns:1fr}
-  .nav-inner{gap:16px}
+  .nav-inner{gap:16px;padding:14px 20px}
+  .wrap{padding:0 20px}
+  .footer-inner{padding:0 20px}
   .nav a.nav-link{font-size:.86rem}
   section{padding:56px 0}
   .cta{padding:38px 26px}
@@ -215,7 +230,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 </section>
 
 <!-- SECTION 2 -->
-<section>
+<section class="band-off">
   <div class="wrap">
     <h2>You already know the symptoms</h2>
     <ul class="rule">
@@ -252,7 +267,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 </section>
 
 <!-- SECTION 4 -->
-<section>
+<section class="band-navy">
   <div class="wrap narrow">
     <h2>What good looks like</h2>
     <p>Every load recorded once, before it leaves. Branch transfers logged as they happen, on both sides. A delivery list you can trust on a Monday morning. Stock, cash and invoices that agree. A named owner against every check, and a routine your team runs without you standing over it.</p>
@@ -284,7 +299,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 </section>
 
 <!-- SECTION 6 -->
-<section>
+<section class="band-off">
   <div class="wrap">
     <h2>What this looks like in practice</h2>
     <p>A ten yard fuel and solid fuel distributor. Stable, profitable, with a four person back office team, and a daily routine that only one of them could run.</p>
