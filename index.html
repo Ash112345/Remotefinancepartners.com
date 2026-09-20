@@ -27,159 +27,94 @@ body{
   color:var(--slate);
   background:#fff;
   font-size:17px;
-  line-height:1.65;
+  line-height:1.62;
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--navy);margin:0 0 .6em}
-h1{font-size:clamp(2.1rem,5.2vw,3.4rem);line-height:1.12;font-weight:700;letter-spacing:-.01em}
-h2{font-size:clamp(1.5rem,3vw,2.05rem);line-height:1.2;font-weight:700}
-h3{font-size:1.15rem;font-weight:600;margin-bottom:.4em}
-p{margin:0 0 1.15em;max-width:70ch}
+h1{font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(1.45rem,2.8vw,1.95rem);line-height:1.2;font-weight:700}
+h3{font-size:1.1rem;font-weight:600;margin-bottom:.4em}
+p{margin:0 0 1.1em;max-width:68ch}
 a{color:var(--green)}
 
-/* Nav */
-.nav{
-  position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:saturate(180%) blur(8px);
-  border-bottom:1px solid var(--border);
-}
-.nav-inner{
-  max-width:1340px;margin:0 auto;padding:14px 32px;
-  display:flex;align-items:center;gap:28px;flex-wrap:wrap;
-}
-.brand{
-  font-family:'Playfair Display',Georgia,serif;font-weight:700;
-  color:var(--navy);text-decoration:none;font-size:1.1rem;margin-right:auto;
-}
-.nav a.nav-link{
-  color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500;
-}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1340px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.brand{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--navy);text-decoration:none;font-size:1.1rem;margin-right:auto}
+.nav a.nav-link{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
 .nav a.nav-link:hover{color:var(--green)}
-.pill{
-  background:var(--green);color:#fff;text-decoration:none;
-  padding:9px 18px;border-radius:999px;font-size:.9rem;font-weight:600;
-  white-space:nowrap;
-}
+.pill{background:var(--green);color:#fff;text-decoration:none;padding:9px 18px;border-radius:999px;font-size:.9rem;font-weight:600;white-space:nowrap}
 .pill:hover{background:var(--green-dk)}
 
-/* Layout */
 .wrap{max-width:1340px;margin:0 auto;padding:0 32px}
-section{padding:78px 0;border-top:1px solid var(--border)}
+section{padding:66px 0;border-top:1px solid var(--border)}
 section:first-of-type{border-top:0}
+.narrow{max-width:880px}
 
-/* Bands */
 .band-off{background:var(--off);border-top:0}
 .band-off + section{border-top:0}
 .band-navy{background:var(--navy);color:rgba(255,255,255,.85);border-top:0}
 .band-navy + section{border-top:0}
 .band-navy h2,.band-navy h3{color:#fff}
 .band-navy p{color:rgba(255,255,255,.85)}
-.band-navy ul.rule li{background:rgba(255,255,255,.06);border-left-color:var(--sage);color:rgba(255,255,255,.9)}
-.band-navy .lever-card{background:rgba(255,255,255,.06);border-left-color:var(--sage)}
-.band-navy .lever-card h3{color:#fff}
-.band-navy blockquote{background:rgba(255,255,255,.06);border-left-color:var(--sage);color:#fff}
-.band-navy .case-block h3{color:var(--sage)}
-.narrow{max-width:880px}
 
-/* Hero */
-.hero{padding:88px 0 76px;border-top:0}
-.hero h1{max-width:16ch}
-.hero .standfirst{font-size:1.16rem;max-width:64ch;color:var(--slate)}
-.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.btn{
-  display:inline-block;text-decoration:none;font-weight:600;font-size:.98rem;
-  padding:13px 26px;border-radius:8px;
-}
+.hero{padding:84px 0 70px;border-top:0}
+.hero h1{max-width:20ch}
+.hero .standfirst{font-size:1.15rem;max-width:62ch}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.98rem;padding:13px 26px;border-radius:8px}
 .btn-primary{background:var(--green);color:#fff}
 .btn-primary:hover{background:var(--green-dk)}
 .btn-ghost{border:1.5px solid var(--border);color:var(--navy)}
 .btn-ghost:hover{border-color:var(--green);color:var(--green)}
 
-/* Lists with green left border */
-ul.rule{list-style:none;padding:0;margin:0}
-ul.rule li{
-  background:var(--off);
-  border-left:3px solid var(--green);
-  padding:16px 20px;
-  margin-bottom:10px;
-  max-width:74ch;
-}
+ul.rule{list-style:none;padding:0;margin:0 0 4px}
+ul.rule li{background:var(--off);border-left:3px solid var(--green);padding:15px 20px;margin-bottom:9px;max-width:72ch}
+.band-off ul.rule li{background:#fff}
 
-/* Theories table */
-.theories{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin:0 0 32px;border-radius:6px;overflow:hidden}
-.theories div{background:var(--sage);padding:22px 20px;font-weight:500;color:var(--navy)}
+.theories{display:flex;gap:2px;background:var(--border);margin:10px 0 30px;border-radius:8px;overflow:hidden}
+.theories div{flex:1}
+.theories div{background:var(--sage);padding:22px 24px;font-weight:500;color:var(--navy);font-size:.97rem;display:flex;align-items:center}
 .theories div:nth-child(2){background:var(--green);color:#fff}
 
-/* Lever cards */
-.levers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
-.lever-card{
-  background:var(--off);
-  border-left:3px solid var(--green);
-  padding:24px 22px;
-}
-.lever-card p{font-size:.97rem;margin-bottom:0;max-width:none}
+.levers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.lever-card{background:var(--off);border-left:3px solid var(--green);padding:22px}
+.lever-card p{font-size:.96rem;margin-bottom:0;max-width:none}
 
-/* Callout */
-.rfp-callout{background:var(--sage);border-radius:10px;padding:26px 28px;margin:28px 0;max-width:74ch}
+.rfp-callout{background:var(--sage);border-radius:10px;padding:24px 26px;margin:26px 0;max-width:72ch}
 .rfp-callout p:last-child{margin-bottom:0}
 
-blockquote{
-  margin:30px 0;padding:6px 0 6px 24px;
-  border-left:3px solid var(--green);
-  background:var(--off);
-  font-family:'Playfair Display',Georgia,serif;
-  font-size:1.22rem;line-height:1.45;color:var(--navy);
-  padding-right:22px;padding-top:20px;padding-bottom:20px;
-  max-width:60ch;
-}
+blockquote{margin:26px 0 0;padding:20px 22px;border-left:3px solid var(--green);background:#fff;font-family:'Playfair Display',Georgia,serif;font-size:1.18rem;line-height:1.45;color:var(--navy);max-width:58ch}
 blockquote p{margin:0;max-width:none}
 
-.case-block{margin-top:44px}
-.case-block h3{
-  font-family:'DM Sans',sans-serif;
-  font-size:.95rem;font-weight:700;color:var(--green);
-  margin-bottom:14px;
-}
-.case-block h3 + p, .case-block h3 + ul{margin-top:0}
-.lever-run{margin-bottom:22px}
-.lever-run strong{color:var(--navy)}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:34px}
+.case-block h3{font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:700;color:var(--green);letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+.case-block p:last-child{margin-bottom:0}
 
-.inline-image{width:100%;border:1px solid var(--border);border-radius:10px;margin:28px 0;display:block}
-
-.lead-in{max-width:64ch;margin-bottom:26px}
-
-/* CTA */
-.cta{
-  background:var(--navy);color:#fff;border-radius:14px;
-  padding:52px 44px;margin:0 0 72px;
-}
-.cta .label{color:var(--sage);font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
-.cta h2{color:#fff;max-width:22ch;margin-bottom:28px}
+.lead-in{max-width:62ch;margin-bottom:24px}
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:48px 42px;margin:0 0 66px}
+.cta .label{color:var(--sage);font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.cta h2{color:#fff;max-width:22ch;margin-bottom:26px}
 .cta .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
-.cta .btn-ghost:hover{border-color:#fff;color:#fff}
-.cta .note{color:rgba(255,255,255,.72);font-size:.9rem;margin:22px 0 0}
+.cta .btn-ghost:hover{border-color:#fff}
+.cta .note{color:rgba(255,255,255,.72);font-size:.9rem;margin:20px 0 0}
 
-/* Footer */
-footer{border-top:1px solid var(--border);padding:30px 0 46px}
-.footer-inner{
-  max-width:1340px;margin:0 auto;padding:0 32px;
-  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
-}
+footer{border-top:1px solid var(--border);padding:28px 0 44px}
+.footer-inner{max-width:1340px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .footer-logo{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--navy)}
 .footer-meta{color:var(--muted);font-size:.85rem;text-align:right}
 .footer-meta a{color:var(--muted)}
 
-a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
 
 @media (max-width:880px){
-  .theories,.levers{grid-template-columns:1fr}
+  .levers,.case-grid{grid-template-columns:1fr}
+  .theories{flex-direction:column}
+  .case-grid{gap:34px}
   .nav-inner{gap:16px;padding:14px 20px}
-  .wrap{padding:0 20px}
-  .footer-inner{padding:0 20px}
+  .wrap,.footer-inner{padding:0 20px}
   .nav a.nav-link{font-size:.86rem}
-  section{padding:56px 0}
-  .cta{padding:38px 26px}
+  section{padding:52px 0}
+  .cta{padding:34px 24px}
   .footer-inner{flex-direction:column;align-items:flex-start}
   .footer-meta{text-align:left}
 }
@@ -201,11 +136,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
 
 <main>
 
-<!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <h1>Stock you cannot barcode. Margin you cannot see.</h1>
-    <p class="standfirst">You have added yards, depots and branches. Turnover is up, costs are up more, and nobody in the business can tell you whether this month is normal. It is almost never theft and it is almost never the software. When stock cannot be scanned, the person who moves it is not the person who records it, so the record gets written later, from memory, by someone doing their best.</p>
+    <h1>Stock control for merchants and depots moving stock that cannot be scanned.</h1>
+    <p class="standfirst">You have added yards, depots and branches. Turnover is up, costs are up more, and nobody can tell you whether this month is normal. It is almost never theft and it is almost never the software. When stock cannot be scanned, the person who moves it is not the person who records it, so the record gets written later, from memory, by someone doing their best.</p>
     <div class="buttons">
       <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a Stock Control Review</a>
       <a class="btn btn-ghost" href="#how-it-works">How it works</a>
@@ -213,158 +147,119 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offs
   </div>
 </section>
 
-<!-- SECTION 1 -->
 <section id="why">
   <div class="wrap narrow">
     <h2>It is not the people, the software or the trade</h2>
-    <p>In a warehouse the barcode makes the record a by-product of the movement. The scan is not extra work, it is how the pick gets confirmed, so the record is created by the person doing the job at the moment they do it.</p>
-    <p>A wrapped pallet has no barcode. Bulk fuel is a quantity rather than an object. A cylinder swap is two unlabelled units changing hands at a kerb in the rain. So somebody writes down later what they think went out, and your accounts are built on top of that.</p>
+    <p>In a warehouse the barcode makes the record a by-product of the movement. The scan is how the pick gets confirmed, so the record is created by the person doing the job, at the moment they do it.</p>
+    <p>A pack of timber gets broken down at the kerb. A wrapped pallet of bags has no barcode. Bulk fuel is a quantity rather than an object. Feed and fertiliser go out by the tonne. A hire item leaves on a nod and comes back when it comes back. So somebody writes down later what they think went out, and your accounts are built on top of that.</p>
     <div class="theories">
       <div>Someone is careless or dishonest.</div>
       <div>The system is not good enough.</div>
-      <div>This trade is just like that and everyone lives with it.</div>
+      <div>This trade is just like that.</div>
     </div>
-    <p>Most owners arrive with one of those three theories. It is usually none of them. Telling an owner that his stock loss is a recording problem rather than a dishonest employee is the most useful thing we say in a first conversation, and it is true far more often than not.</p>
-    <p>Your team are solving problems in real time with the information they have. The business grew but the systems to manage it did not.</p>
+    <p>Most owners arrive with one of those three theories. It is usually none of them. Your team are solving problems in real time with the information they have. The business grew but the way it records itself did not.</p>
   </div>
 </section>
 
-<!-- SECTION 2 -->
 <section class="band-off">
   <div class="wrap">
     <h2>You already know the symptoms</h2>
     <ul class="rule">
-      <li>The same delivery goes out twice. The first one never made it onto the system, so someone loads it again. You have paid for the stock, the driver and the fuel, twice, and the customer did not ask for it.</li>
-      <li>Stock moves between branches and nobody writes it down. One yard is short, so they pull from another to get the load out. Good instinct, right call on the day. The system never hears about it, and three weeks later a branch is down forty bags with nothing but an argument to explain it.</li>
+      <li>The same delivery goes out twice. The first one never made it onto the system, so someone loads it again. You paid for the stock, the driver and the fuel, twice.</li>
+      <li>Stock moves between branches and nobody writes it down. Right call on the day. Three weeks later a branch is short with nothing but an argument to explain it.</li>
       <li>The count never agrees, and nobody can tell you whether it is theft, breakage, a mis-keyed delivery or a transfer that was never recorded.</li>
-      <li>Sales are worked out from the count rather than recorded independently, so stock and revenue can never check each other and no variance can ever arise.</li>
-      <li>Invoices go out days after the job, and it is felt as a cash flow problem rather than an admin one.</li>
       <li>Every site writes up a delivery note its own way, and nobody has put the versions side by side.</li>
       <li>You are still doing the numbers on a Sunday night.</li>
     </ul>
   </div>
 </section>
 
-<!-- SECTION 3 -->
 <section id="what-we-do">
   <div class="wrap">
     <h2>People, process, platform. In that order.</h2>
     <div class="levers">
       <div class="lever-card">
         <h3>People</h3>
-        <p>Three people record the same delivery three different ways, one person just knows what is in the yard, and nobody is accountable for the numbers agreeing. We map who actually touches stock, cash and invoices, then give you a model that says who does what, who checks it, and who carries it if it is wrong.</p>
+        <p>Three people record the same delivery three different ways, one person just knows what is in the yard, and nobody is accountable for the numbers agreeing. We map who actually touches stock, cash and invoices, then say who does what, who checks it, and who carries it if it is wrong.</p>
       </div>
       <div class="lever-card">
         <h3>Process</h3>
-        <p>We trace transactions from order to delivery to invoice to bank, and find where information is re-keyed, delayed or lost. Every workaround your team has invented, we find, and either build it in properly or design it out. Then we write it down in plain language, two sides of A4 per process. If it does not fit on that, your team will not follow it.</p>
+        <p>We trace transactions from order to delivery to invoice to bank, and find where information is re-keyed, delayed or lost. Then we write it down in plain language, two sides of A4 per process. If it does not fit on that, your team will not follow it.</p>
       </div>
       <div class="lever-card">
         <h3>Platform</h3>
-        <p>Last, not first. Nine times out of ten the answer is the system you already own, configured properly. Delivery windows switched off. A stock module licensed and sitting idle. Mobile proof of delivery live on two sites out of ten. Where a gap is genuinely a tooling gap we will say so and tell you what it costs. Where it is not, we will tell you that too.</p>
+        <p>Last, not first. Nine times out of ten the answer is the system you already own, configured properly. Where a gap is genuinely a tooling gap we will say so and tell you what it costs. Where it is not, we will tell you that too.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 4 -->
 <section class="band-navy">
   <div class="wrap narrow">
     <h2>What good looks like</h2>
-    <p>Every load recorded once, before it leaves. Branch transfers logged as they happen, on both sides. A delivery list you can trust on a Monday morning. Stock, cash and invoices that agree. A named owner against every check, and a routine your team runs without you standing over it.</p>
+    <p>Every load recorded once, before it leaves. Transfers between sites logged as they happen, on both sides. Stock, cash and invoices that agree. A named owner against every check, and a routine your team runs without you standing over it.</p>
     <p>None of that requires new software or a new hire. It requires the recording to happen where the work happens, rather than afterwards from memory.</p>
   </div>
 </section>
 
-<!-- SECTION 5 -->
 <section id="how-it-works">
   <div class="wrap narrow">
     <h2>What happens on a Stock Control Review</h2>
-    <p>An hour on Google Meet, twenty questions about how your operation actually works. Where deliveries get recorded and when. What happens when one branch pulls stock from another. Who counts, who reconciles, who banks it, and whether that is the same person. What you would do if the person who knows where everything is went off for a month.</p>
-    <p>We do not fix anything on the call. We ask, you talk, and we write it down.</p>
-    <p>Three working days later you get a written summary. It contains:</p>
+    <p>An hour on Google Meet, twenty questions about how your operation actually works. Where deliveries get recorded and when. What happens when one branch pulls stock from another. Who counts, who reconciles, who banks it, and whether that is the same person.</p>
+    <p>We do not fix anything on the call. We ask, you talk, and we write it down. Three working days later you get a written summary:</p>
     <ul class="rule">
-      <li>A score out of forty, across five areas: recording the movement, counting and reconciliation, cash and invoicing, ownership and cover, and systems. Most multi-site operators score between twelve and twenty-five. That is normal for a business that has grown faster than its back office, and it is not a reflection on your team.</li>
-      <li>The three things most likely costing you money, ranked by what they cost rather than by how hard they are to fix, and quoted in your numbers rather than ours.</li>
+      <li>A score out of forty across five areas. Most multi-site operators score between twelve and twenty-five, which is normal for a business that grew faster than its back office.</li>
+      <li>The three things most likely costing you money, ranked by cost rather than by how hard they are to fix, in your numbers rather than ours.</li>
       <li>Three things we would do first if the business were ours. They cost nothing but a decision.</li>
     </ul>
     <div class="rfp-callout">
       <h3>One you can have now</h3>
-      <p>One of those three is nearly always the same. Agree one way of recording a transfer between sites, and require both ends to be written up. Most multi-site businesses record transfers on one side only. It is the largest invisible loss in the trade and it is the reason your counts never agree.</p>
+      <p>Agree one way of recording a transfer between sites, and require both ends to be written up. Most multi-site businesses record transfers on one side only. It is the largest invisible loss in the trade and it is the reason your counts never agree.</p>
     </div>
-    <p>There is no charge and nothing to sign. If there is something bigger worth doing, we will say so and put a proposal in front of you. If there is not, we will say that too.</p>
+    <p>No charge and nothing to sign. If there is something bigger worth doing we will say so. If there is not, we will say that too.</p>
     <div class="buttons">
       <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a Stock Control Review</a>
     </div>
   </div>
 </section>
 
-<!-- SECTION 6 -->
 <section class="band-off">
   <div class="wrap">
     <h2>What this looks like in practice</h2>
-    <p>A ten yard fuel and solid fuel distributor. Stable, profitable, with a four person back office team, and a daily routine that only one of them could run.</p>
-
-    <div class="case-block">
-      <h3>What we found</h3>
-      <ul class="rule">
-        <li>Revenue was a residual rather than a record. Sales were inferred from a nightly count, so no variance could ever arise.</li>
-        <li>The spreadsheet column that checked closing stock was mathematically incapable of ever disagreeing with it.</li>
-        <li>Transfers between sites were put through as sales and returns, because no separate transfer route existed, so stock moving between two of the company's own yards looked identical to stock leaving the business.</li>
-        <li>Bulk out notes were being written in seven different formats across ten yards, so no rule could be applied to them and nothing could be checked automatically.</li>
-        <li>One rep, one round, one day: real trade sitting in the sales system, nothing at all in the sheet that drove revenue and banking.</li>
-        <li>A cash reconciliation ran correctly for months, stopped on a Thursday in July, and left three weeks of exceptions that nobody actioned.</li>
-        <li>54 activities mapped across the daily stock and cash cycle. 15 with no owner at all. 12 resting on one individual.</li>
-      </ul>
-      <blockquote><p>The tolerances, the discount ceiling and the four steps for tracing a missing pallet all existed and all worked. They existed in one head.</p></blockquote>
-    </div>
-
-    <div class="case-block">
-      <h3>What we did</h3>
-      <div class="lever-run">
-        <p><strong>People.</strong> One accountable owner for stock and cash accuracy. Cover for absence. Owners assigned against every one of the 54 activities, and the fourteen decisions only the Managing Director could make surfaced, put in front of him and closed.</p>
+    <p>A ten yard distributor. Stable, profitable, with a four person back office team and a daily routine that only one of them could run.</p>
+    <div class="case-grid">
+      <div class="case-block">
+        <h3>What we found</h3>
+        <ul class="rule">
+          <li>Revenue was a residual rather than a record. Sales were inferred from a nightly count, so no variance could ever arise.</li>
+          <li>Transfers between sites were put through as sales and returns, because no transfer route existed. Stock moving between two of the company's own yards looked identical to stock leaving the business.</li>
+          <li>Notes were being written in seven different formats across ten yards, so nothing could be checked automatically.</li>
+          <li>54 activities mapped. 15 with no owner at all. 12 resting on one individual.</li>
+        </ul>
+        <blockquote><p>The tolerances, the discount ceiling and the four steps for tracing a missing pallet all existed and all worked. They existed in one head.</p></blockquote>
       </div>
-      <div class="lever-run">
-        <p><strong>Process.</strong> Our team learned the operation before changing any of it. We shadowed the daily routine end to end, sat with the people who record the movements, and traced transactions from order to delivery to invoice to bank.</p>
-        <p>What came out of that was a standard operating procedure the yards actually work to: one bulk out convention, one unit of account across the depot and the yards, a standard yard sheet, a daily cut-off, and the judgements written down alongside the steps rather than left in somebody's head.</p>
-        <p>Ten yards, standardised, without pretending they are identical. One yard exchanges empties on its own arrangement, one handles no pallets at all, one closes two days a week. Those are real differences and the procedure names them, so a variation is a documented exception rather than a site quietly doing its own thing. Standardising the way things are recorded is what lets the yards stay different where they need to be.</p>
+      <div class="case-block">
+        <h3>What we did</h3>
+        <p>We shadowed the daily routine end to end before changing any of it, then wrote a standard operating procedure the yards actually work to: one recording convention, one unit of account, a standard yard sheet, a daily cut-off, and the judgements written down alongside the steps.</p>
+        <p>Ten yards, standardised, without pretending they are identical. One exchanges empties on its own arrangement, one handles no pallets, one closes two days a week. The procedure names those, so a variation is a documented exception rather than a site quietly doing its own thing.</p>
+        <p>No new software. We built a file that records a transfer as a transfer, with both ends of the movement on it, because the system had no route for one.</p>
+        <h3 style="margin-top:30px">What we run now</h3>
+        <p>We are embedded as their Quality and Operations function: daily reconciliation, standards and conventions, stock count oversight, exception management, documentation, data quality and reporting. Eight measures were baselined at the start and are reported monthly.</p>
+        <p>The routine now runs to a written standard rather than from one person's memory, and more than one person can run it. Exceptions get logged, assigned and chased instead of surfacing three weeks later.</p>
       </div>
-      <div class="lever-run">
-        <p><strong>Platform.</strong> Configuration of what they already owned, and validation built into the sheets. No new software. We built a working file that records a transfer as a transfer, with both ends of the movement on it, because the system had no route for one. The file was the easy part. Getting both ends written up every time is what needs an owner.</p>
-      </div>
-    </div>
-
-    <div class="case-block">
-      <h3>What we run now</h3>
-      <p>We are embedded as their Quality and Operations function, working inside their systems and to their standards, covering:</p>
-      <ul class="rule">
-        <li>Daily reconciliation and control</li>
-        <li>Standards and conventions</li>
-        <li>Stock count oversight</li>
-        <li>Exception and error management</li>
-        <li>Compliance and documentation</li>
-        <li>Systems, data quality and continuous improvement</li>
-        <li>Reporting</li>
-      </ul>
-      <p>Eight measures were baselined at the start so that progress is visible rather than asserted, and are reported monthly.</p>
-    </div>
-
-    <div class="case-block">
-      <h3>What it achieves</h3>
-      <p>The daily routine now runs to a written standard rather than from one person's memory, and more than one person can run it. Every yard is working to the same conventions, so a difference between two sites means something rather than nothing. Exceptions are logged, assigned and chased to closure instead of being noticed three weeks later. And the Managing Director has a monthly view of where the numbers are reliable and where they are not, which is the thing he did not have before.</p>
     </div>
   </div>
 </section>
 
-<!-- SECTION 7 -->
 <section>
   <div class="wrap narrow">
     <h2>Who this is for</h2>
-    <p>Merchants and depots running stock across more than one site. Builders and timber, fuel and LPG, aggregates and landscaping supply, agricultural merchants, plant hire. Typically owner managed, four to twenty staff, no dedicated finance hire, trading on account or in cash.</p>
+    <p>Merchants and depots running stock across more than one site. Builders and timber merchants. Fuel and LPG distributors. Agricultural merchants. Aggregates and landscaping supply. Plant hire. Typically owner managed, four to twenty staff, no dedicated finance hire.</p>
     <p>The common factor is not the product. It is that the person who moves the stock is not the person who records it.</p>
+    <p>We do not fix a broken business model, replace your accounting system, or make bad data good retrospectively. We are not looking for fraud, we are looking for control weaknesses, and those are two very different conversations.</p>
   </div>
 </section>
 
-<!-- CTA -->
 <div class="wrap">
   <p class="lead-in">If one name keeps coming up every time somebody asks how something works, that is worth an hour before it becomes a succession problem.</p>
   <div class="cta">
