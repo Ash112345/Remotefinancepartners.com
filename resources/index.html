@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources | Remote Finance Partners</title>
+<meta name="description" content="Notes on stock control, reconciliation and the admin behind multi-site merchants and depots. Written for operators who need the record to agree.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1F3B;
+  --green:#1F6F54;
+  --green-dk:#175a43;
+  --sage:#D7E7DD;
+  --off:#F2F5F8;
+  --slate:#303F4A;
+  --muted:#6B7280;
+  --border:#DDE3EA;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'DM Sans',system-ui,sans-serif;
+  color:var(--slate);
+  background:#fff;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--navy);margin:0 0 .6em}
+h1{font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.12;font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(1.45rem,2.8vw,1.95rem);line-height:1.2;font-weight:700}
+h3{font-size:1.1rem;font-weight:600;margin-bottom:.4em}
+p{margin:0 0 1.1em;max-width:68ch}
+a{color:var(--green)}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1340px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.brand{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--navy);text-decoration:none;font-size:1.1rem;margin-right:auto}
+.nav a.nav-link{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav a.nav-link:hover{color:var(--green)}
+.nav a.nav-link[aria-current="page"]{color:var(--green);font-weight:600}
+.pill{background:var(--green);color:#fff;text-decoration:none;padding:9px 18px;border-radius:999px;font-size:.9rem;font-weight:600;white-space:nowrap}
+.pill:hover{background:var(--green-dk)}
+
+.wrap{max-width:1340px;margin:0 auto;padding:0 32px}
+section{padding:66px 0;border-top:1px solid var(--border)}
+section:first-of-type{border-top:0}
+.narrow{max-width:880px}
+
+.band-off{background:var(--off);border-top:0}
+.band-off + section{border-top:0}
+
+.hero{padding:84px 0 44px;border-top:0}
+.hero h1{max-width:16ch}
+.hero .standfirst{font-size:1.15rem;max-width:62ch}
+
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.98rem;padding:13px 26px;border-radius:8px}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-dk)}
+.btn-ghost{border:1.5px solid var(--border);color:var(--navy)}
+.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+
+/* ---- Article grid. Add one .res-card per article. ---- */
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+.res-card{
+  display:flex;flex-direction:column;
+  background:#fff;border:1px solid var(--border);border-radius:10px;
+  padding:26px 24px;text-decoration:none;
+  transition:border-color .15s ease, transform .15s ease;
+}
+.res-card:hover{border-color:var(--green);transform:translateY(-2px)}
+.res-card .kicker{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.res-card h3{font-family:'Playfair Display',Georgia,serif;font-size:1.18rem;font-weight:700;line-height:1.28;margin-bottom:10px}
+.res-card p{font-size:.95rem;color:var(--slate);margin:0;max-width:none}
+.res-card .more{margin-top:16px;font-size:.9rem;font-weight:600;color:var(--green)}
+
+/* ---- Empty state. Delete this block once you have cards. ---- */
+.empty{
+  background:var(--off);border-left:3px solid var(--green);
+  border-radius:0 10px 10px 0;padding:32px 34px;max-width:72ch;
+}
+.empty h3{font-family:'Playfair Display',Georgia,serif;font-size:1.25rem}
+.empty p:last-child{margin-bottom:0}
+
+.cta{background:var(--navy);color:#fff;border-radius:14px;padding:48px 42px;margin:0 0 66px}
+.cta .label{color:var(--sage);font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.cta h2{color:#fff;max-width:22ch;margin-bottom:26px}
+.cta p{color:rgba(255,255,255,.85)}
+.cta .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.cta .btn-ghost:hover{border-color:#fff}
+.cta .note{color:rgba(255,255,255,.72);font-size:.9rem;margin:20px 0 0}
+
+footer{border-top:1px solid var(--border);padding:28px 0 44px}
+.footer-inner{max-width:1340px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.footer-logo{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--navy)}
+.footer-meta{color:var(--muted);font-size:.85rem;text-align:right}
+.footer-meta a{color:var(--muted)}
+
+a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+
+@media (max-width:1100px){
+  .res-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:880px){
+  .res-grid{grid-template-columns:1fr}
+  .nav-inner{gap:16px;padding:14px 20px}
+  .wrap,.footer-inner{padding:0 20px}
+  .nav a.nav-link{font-size:.86rem}
+  section{padding:52px 0}
+  .hero{padding:58px 0 34px}
+  .cta{padding:34px 24px}
+  .empty{padding:26px 24px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-meta{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/">Remote Finance Partners</a>
+    <a class="nav-link" href="/#why">Why the numbers do not agree</a>
+    <a class="nav-link" href="/#what-we-do">What we do</a>
+    <a class="nav-link" href="/#how-it-works">How it works</a>
+    <a class="nav-link" href="/resources/" aria-current="page">Resources</a>
+    <a class="pill" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a Stock Control Review</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Resources</h1>
+    <p class="standfirst">Working notes on stock control, reconciliation and the admin that sits behind multi-site merchants and depots. Written for the people who have to make the record agree, not for the people who write the software.</p>
+  </div>
+</section>
+
+<section class="band-off">
+  <div class="wrap">
+
+    <!-- ================================================================
+         EMPTY STATE
+         Delete this entire <div class="empty"> block once you have
+         added your first card below.
+         ================================================================ -->
+    <div class="empty">
+      <h3>New pieces are on the way</h3>
+      <p>We are rebuilding this section from the ground up. Practical write-ups on stock variance, cash reconciliation and depot process are being published here over the coming weeks.</p>
+      <p>If there is something specific you are wrestling with, it is usually quicker to just ask.</p>
+      <p><a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a Stock Control Review</a></p>
+    </div>
+
+    <!-- ================================================================
+         ARTICLE GRID
+         To publish an article:
+           1. Create a folder:  /resources/your-article-slug/
+           2. Put an index.html inside it
+           3. Uncomment the grid below and copy a card for each article
+         ================================================================ -->
+    <!--
+    <div class="res-grid">
+
+      <a class="res-card" href="/resources/your-article-slug/">
+        <div class="kicker">Stock control</div>
+        <h3>The headline of the article goes here</h3>
+        <p>One or two sentences describing what the reader gets out of it. Keep it to around twenty five words.</p>
+        <div class="more">Read &rarr;</div>
+      </a>
+
+      <a class="res-card" href="/resources/another-slug/">
+        <div class="kicker">Reconciliation</div>
+        <h3>Second article headline</h3>
+        <p>One or two sentences describing what the reader gets out of it.</p>
+        <div class="more">Read &rarr;</div>
+      </a>
+
+    </div>
+    -->
+
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <div class="label">Start here</div>
+      <h2>Find out why your stock, cash and invoices do not agree</h2>
+      <p>A Stock Control Review maps how product and money actually move through your sites, then shows you where the record breaks. No new software and no new hire.</p>
+      <a class="btn btn-ghost" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a Stock Control Review</a>
+      <p class="note">One hour. No obligation.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Remote Finance Partners</div>
+    <div class="footer-meta">
+      <a href="/privacy/">Privacy Policy</a><br>
+      A trading name of Brilserve Ltd &middot; Company No. 08590849 &middot; Registered in England &amp; Wales
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
