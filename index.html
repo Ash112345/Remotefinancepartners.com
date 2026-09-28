@@ -201,7 +201,19 @@
     .finding .actions { margin-top: 1.75rem; }
 
     /* About */
-    .about .wrap { max-width: 820px; }
+    .about .wrap { max-width: 1040px; display: grid; gap: 2rem; }
+    @media (min-width: 860px) {
+      .about .wrap { grid-template-columns: 240px 1fr; gap: 4rem; align-items: start; }
+    }
+    .portrait {
+      width: 160px; height: 160px; border-radius: 50%; object-fit: cover;
+      border: 4px solid var(--sage); display: block;
+    }
+    @media (min-width: 860px) { .portrait { width: 240px; height: 240px; } }
+    .portrait-caption { margin-top: .9rem; font-weight: 700; line-height: 1.3; }
+    .portrait-caption span { display: block; font-weight: 400; color: var(--muted); font-size: .95rem; }
+    .byline { display: flex; align-items: center; gap: .75rem; }
+    .byline img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: 0 0 44px; }
     .about h2 { margin-bottom: 2rem; }
     .about p { font-size: 1.12rem; line-height: 1.7; }
     .about .closer {
@@ -248,7 +260,7 @@
           <li>Every site running the same way</li>
           <li>No single point of failure</li>
         </ul>
-        <p class="byline">Ash Abraham, Founder @ Remote Finance Partners</p>
+        <p class="byline"><img src="ash-abraham.jpg" alt="" width="44" height="44">Ash Abraham, Founder @ Remote Finance Partners</p>
         <p class="promise">No new software. No new hires. No long-term dependency on us.</p>
         <div class="actions">
           <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
@@ -423,12 +435,18 @@
 
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="wrap">
+        <div>
+          <img class="portrait" src="ash-abraham.jpg" alt="Ash Abraham, founder of Remote Finance Partners" width="240" height="240" loading="lazy">
+          <p class="portrait-caption">Ash Abraham<span>Founder, Remote Finance Partners</span></p>
+        </div>
+        <div>
         <span class="kicker">Why I do this</span>
         <h2 id="about-title">I learned to fix problems at the source.</h2>
         <p>At Amazon, I worked with the quality teams in the middle mile, the part of the network that moves stock between sites. Every day, exceptions came in: things that hadn't gone to plan. I'd dig into the data, find the problems that kept repeating, and bring the teams involved together to fix them with better workflow, so the same issue didn't come back the next day.</p>
         <p>At Track24, a tech and security scale-up, I reported directly to the COO and my job was to make the business run leaner. I mapped how work actually moved through the company, end to end, before touching anything. Only then did we change the systems, and the result was less manual work, lower costs and numbers leadership could actually trust.</p>
         <p class="closer">When the same fire keeps starting, you don't need a better firefighter. You need to find where it starts.</p>
         <p>Most growing businesses don't need more software or more people. They need clarity on the numbers, and a routine that doesn't live in one person's head, or yours.</p>
+        </div>
       </div>
     </section>
 
