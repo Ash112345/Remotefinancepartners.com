@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credit Control | Remote Finance Partners</title>
+  <meta name="description" content="We chase your invoices, forecast your cash and track your pipeline, so you get paid for the work you've already done.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1F3B;
+      --green: #1F6F54;
+      --green-dark: #17553F;
+      --sage: #D7E7DD;
+      --sage-light: #EEF5F0;
+      --paper: #FBFCFA;
+      --muted: #4A5A6A;
+      --line: #C4D6CB;
+      --font: "DM Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      --display: "Playfair Display", Georgia, "Times New Roman", serif;
+      --wrap: 1180px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--navy);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.5rem; }
+    .skip {
+      position: absolute; left: -999px; top: 0;
+      background: var(--navy); color: #fff; padding: .75rem 1rem; z-index: 10;
+    }
+    .skip:focus { left: 1rem; top: 1rem; }
+
+    /* Type */
+    h1, h2, h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.005em;
+      margin: 0;
+    }
+    h1 { font-size: clamp(2.7rem, 7vw, 5.5rem); max-width: 14ch; }
+    h2 { font-size: clamp(2.1rem, 4.6vw, 3.5rem); max-width: 18ch; }
+    h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+    p { margin: 0 0 1em; max-width: 62ch; }
+    .kicker {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--green);
+      margin-bottom: .9rem;
+    }
+    .lede { font-size: clamp(1.15rem, 2vw, 1.35rem); line-height: 1.5; max-width: 40ch; }
+
+    /* Buttons */
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+    .btn {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: .95rem 1.4rem;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      transition: background-color .15s ease, color .15s ease;
+    }
+    .btn-primary { background: var(--green); color: #fff; }
+    .btn-primary:hover { background: var(--green-dark); }
+    .btn-secondary { border-color: var(--navy); color: var(--navy); }
+    .btn-secondary:hover { background: var(--navy); color: #fff; }
+    .btn-light { background: var(--sage); color: var(--navy); }
+    .btn-light:hover { background: #fff; }
+    .btn-outline-light { border-color: var(--sage); color: #fff; }
+    .btn-outline-light:hover { background: var(--sage); color: var(--navy); }
+
+    /* Header and nav */
+    .site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+    .site-header .wrap {
+      display: flex; align-items: center; flex-wrap: wrap;
+      gap: .75rem 1.75rem; padding-top: 1rem; padding-bottom: 1rem;
+    }
+    .wordmark {
+      font-family: var(--display); font-weight: 700; font-size: 1.35rem;
+      text-decoration: none; letter-spacing: -0.005em; margin-right: auto;
+    }
+    .site-nav { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    .site-nav a { text-decoration: none; font-weight: 600; font-size: .98rem; padding: .25rem 0; border-bottom: 2px solid transparent; }
+    .site-nav a:hover { color: var(--green); }
+    .site-nav a[aria-current="page"] { color: var(--green); border-bottom-color: var(--green); }
+    .site-header .btn { padding: .6rem 1rem; font-size: .95rem; white-space: nowrap; }
+    @media (max-width: 720px) {
+      .site-nav { order: 3; width: 100%; gap: 1.25rem; }
+    }
+    @media (max-width: 480px) { .wordmark { font-size: 1.15rem; line-height: 1.15; } }
+
+    /* Sections */
+    section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
+    section h2 { margin-bottom: 1.5rem; }
+
+    /* Hero */
+    .hero { padding-top: clamp(3.5rem, 8vw, 6.5rem); }
+    .hero h1 { margin-bottom: 1.75rem; }
+    .benefits {
+      list-style: none; padding: 0; margin: 1.75rem 0 0;
+      display: flex; flex-wrap: wrap; row-gap: .5rem;
+      font-weight: 700; font-size: 1.05rem;
+    }
+    .benefits li { padding-right: 1rem; margin-right: 1rem; border-right: 2px solid var(--green); line-height: 1.2; }
+    .benefits li:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+    @media (max-width: 600px) {
+      .benefits { flex-direction: column; }
+      .benefits li { border-right: 0; margin-right: 0; padding: 0 0 0 .75rem; border-left: 3px solid var(--green); }
+      .benefits li:last-child { padding-left: .75rem; }
+    }
+    .byline { margin-top: 1.25rem; color: var(--muted); font-size: .98rem; display: flex; align-items: center; gap: .75rem; }
+    .byline img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: 0 0 44px; }
+
+    /* Problem */
+    .problem { background: var(--sage); }
+    .split { display: grid; gap: 2.5rem; }
+    @media (min-width: 900px) {
+      .split { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    }
+    .problem p { font-size: 1.2rem; }
+    .ruled { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--navy); }
+    .ruled li {
+      padding: 1.05rem 0; border-bottom: 1px solid rgba(11,31,59,.25);
+      font-size: 1.12rem; font-weight: 500; line-height: 1.4;
+    }
+
+    /* Numbered steps */
+    .steps { list-style: none; margin: 2.5rem 0 0; padding: 0; display: grid; gap: 2rem; }
+    @media (min-width: 800px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; } }
+    .steps li { border-top: 2px solid var(--navy); padding-top: 1.25rem; }
+    .step-num {
+      display: block; font-family: var(--display); font-weight: 700;
+      font-size: 3.5rem; line-height: 1; color: var(--green); margin-bottom: .5rem;
+    }
+    .step-title { display: block; font-family: var(--display); font-weight: 700; font-size: 1.6rem; margin-bottom: .5rem; }
+    .steps p { margin: 0; color: var(--muted); }
+    .note { margin-top: 2.5rem; font-weight: 700; }
+    .what { border-top: 1px solid var(--line); }
+
+    /* Blockers (scroll-linked invoice grid, mirrors the homepage case study) */
+    .blockers { background: var(--navy); color: #fff; }
+    .blockers .kicker { color: var(--sage); }
+    .blockers-intro { margin-bottom: clamp(3rem, 6vw, 4.5rem); }
+    .blockers-body { display: grid; gap: 3rem; }
+    @media (min-width: 900px) {
+      .blockers-body { grid-template-columns: minmax(300px, 5fr) 7fr; gap: 5rem; }
+      .grid-panel { position: sticky; top: 2rem; align-self: start; }
+    }
+    .grid-panel figure { margin: 0; }
+    .ledger {
+      background: var(--paper); color: var(--navy); border-radius: 8px;
+      padding: 1.5rem 1.5rem 1.25rem; max-width: 460px;
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+    }
+    .ledger-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: .75rem; }
+    .ledger-title { font-family: var(--display); font-weight: 700; font-size: 1.3rem; }
+    .ledger-sub { font-size: .85rem; color: var(--muted); }
+    .ledger ol { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--navy); }
+    .row {
+      display: grid; grid-template-columns: 5.5rem 1fr auto; align-items: center; gap: .75rem;
+      padding: .7rem 0; border-bottom: 1px solid var(--line); font-size: .95rem;
+      transition: opacity .35s ease;
+    }
+    .inv { font-weight: 600; }
+    .amt { font-variant-numeric: tabular-nums; }
+    .pill {
+      font-size: .8rem; font-weight: 700; padding: .3rem .65rem; border-radius: 999px;
+      white-space: nowrap; border: 2px solid transparent;
+      transition: background-color .5s ease, color .5s ease, border-color .5s ease;
+    }
+    .pill .now { display: inline; } .pill .after { display: none; }
+    .row-paid .pill { background: var(--sage); color: var(--green-dark); }
+    .row-late .pill { background: var(--navy); color: #fff; }
+    .row-stuck .pill { border: 2px dashed var(--navy); color: var(--navy); }
+    .ledger-foot {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-top: 1rem; font-weight: 700;
+    }
+    .owed { font-family: var(--display); font-size: 1.6rem; font-variant-numeric: tabular-nums; }
+    .owed .after { display: none; }
+    @media (prefers-reduced-motion: reduce) { .row, .pill { transition: none; } }
+
+    .ledger[data-focus="late"] .row:not(.row-late),
+    .ledger[data-focus="stuck"] .row:not(.row-stuck) { opacity: .3; }
+    .ledger[data-focus="cleared"] .row-late .pill,
+    .ledger[data-focus="cleared"] .row-stuck .pill { background: var(--green); color: #fff; border-color: var(--green); }
+    .ledger[data-focus="cleared"] .pill .now,
+    .ledger[data-focus="cleared"] .owed .now { display: none; }
+    .ledger[data-focus="cleared"] .row-late .pill .after,
+    .ledger[data-focus="cleared"] .row-stuck .pill .after,
+    .ledger[data-focus="cleared"] .owed .after { display: inline; }
+    .ledger[data-focus="cleared"] .row-paid .pill .now { display: inline; }
+    .ledger[data-focus="cleared"] .owed { color: var(--green); }
+    figcaption { margin-top: 1rem; font-size: .95rem; color: var(--sage); max-width: 40ch; }
+    .stage + .stage { margin-top: clamp(4rem, 9vw, 7rem); padding-top: clamp(2.5rem, 5vw, 3.5rem); border-top: 1px solid rgba(215,231,221,.3); }
+    .stage-word {
+      display: block; font-family: var(--display); font-weight: 700;
+      font-size: clamp(3.5rem, 9vw, 6rem); line-height: .95; margin-bottom: 1.25rem;
+    }
+    .stage p { font-size: 1.2rem; color: #E4ECE7; max-width: 40ch; }
+
+    /* Who */
+    .who { background: var(--sage-light); border-bottom: 1px solid var(--line); }
+    .who h2 { max-width: 22ch; }
+    .who p { font-size: 1.12rem; }
+
+    /* Partners */
+    .partners .closer {
+      font-family: var(--display); font-weight: 700; font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+      line-height: 1.3; padding-left: 1.25rem; border-left: 4px solid var(--green); max-width: 40ch;
+    }
+
+    /* Contact */
+    .contact { background: var(--green); color: #fff; }
+    .contact .kicker { color: var(--sage); }
+    .contact p { font-size: 1.2rem; }
+
+    /* Footer */
+    .site-footer { background: var(--navy); color: var(--sage); padding: 2.5rem 0; font-size: .92rem; }
+    .site-footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; }
+    .site-footer strong { color: #fff; font-family: var(--display); font-weight: 700; font-size: 1.1rem; }
+    .legal { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/">Remote Finance Partners</a>
+      <ul class="site-nav" aria-label="Main">
+        <li><a href="/">Home</a></li>
+        <li><a href="/credit-control/" aria-current="page">Credit control</a></li>
+        <li><a href="/resources/">Resources</a></li>
+      </ul>
+      <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="wrap">
+        <h1>Get paid for the work you've already done.</h1>
+        <p class="lede">We chase your invoices, forecast your cash and track your pipeline. You run the business.</p>
+        <ul class="benefits" aria-label="What you get">
+          <li>Paid sooner</li>
+          <li>Cash you can see</li>
+          <li>Problems caught early</li>
+        </ul>
+        <p class="byline"><img src="/ash-abraham.jpg" alt="Ash Abraham" width="44" height="44">Ash Abraham, Founder @ Remote Finance Partners</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
+          <a class="btn btn-secondary" href="#what-we-do">How it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem" aria-labelledby="problem-title">
+      <div class="wrap split">
+        <div>
+          <span class="kicker">Sound familiar?</span>
+          <h2 id="problem-title">Profitable on paper. Short in the bank.</h2>
+          <p>You're busy doing the work. Nobody's chasing.</p>
+        </div>
+        <ul class="ruled">
+          <li>Invoices go out late.</li>
+          <li>Nobody knows who owes what.</li>
+          <li>One query holds up payment for weeks.</li>
+          <li>Cash problems show up once they've landed.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="costs" aria-labelledby="costs-title">
+      <div class="wrap">
+        <span class="kicker">What it's costing you</span>
+        <h2 id="costs-title">Late cash hits you three ways.</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-num" aria-hidden="true">1</span>
+            <span class="step-title">Lower margins</span>
+            <p>Your money is funding their business.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">2</span>
+            <span class="step-title">Extra costs</span>
+            <p>Overdrafts and borrowing to cover the gap.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">3</span>
+            <span class="step-title">Late warnings</span>
+            <p>By the time you notice, they owe you more.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="what" id="what-we-do" aria-labelledby="what-title">
+      <div class="wrap">
+        <span class="kicker">What we do</span>
+        <h2 id="what-title">Credit control, done properly.</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-num" aria-hidden="true">1</span>
+            <span class="step-title">Chasing</span>
+            <p>On a set routine, in your name, relationship intact.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">2</span>
+            <span class="step-title">Cash flow forecasting</span>
+            <p>See a squeeze weeks ahead.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">3</span>
+            <span class="step-title">Pipeline forecasting</span>
+            <p>Know what's coming in next.</p>
+          </li>
+        </ol>
+        <p class="note">Our process, under your brand.</p>
+      </div>
+    </section>
+
+    <section class="blockers" aria-labelledby="blockers-title">
+      <div class="wrap">
+        <div class="blockers-intro">
+          <span class="kicker">Clearing blockers</span>
+          <h2 id="blockers-title">Some invoices aren't late. They're stuck.</h2>
+        </div>
+
+        <div class="blockers-body">
+          <div class="grid-panel">
+            <figure>
+              <div class="ledger" data-focus="all" role="img" aria-label="Illustrative list of seven invoices: three paid, two late, three stuck. After chasing, all are paid and nothing is owed.">
+                <div class="ledger-head"><span class="ledger-title">Your invoices</span><span class="ledger-sub">This month</span></div>
+                <ol>
+                  <li class="row row-paid"><span class="inv">INV-1036</span><span class="amt">£2,400</span><span class="pill"><span class="now">Paid</span><span class="after">Paid</span></span></li>
+                  <li class="row row-late"><span class="inv">INV-1038</span><span class="amt">£6,150</span><span class="pill"><span class="now">41 days late</span><span class="after">Paid</span></span></li>
+                  <li class="row row-paid"><span class="inv">INV-1039</span><span class="amt">£980</span><span class="pill"><span class="now">Paid</span><span class="after">Paid</span></span></li>
+                  <li class="row row-stuck"><span class="inv">INV-1041</span><span class="amt">£3,720</span><span class="pill"><span class="now">Missing PO</span><span class="after">Paid</span></span></li>
+                  <li class="row row-late"><span class="inv">INV-1043</span><span class="amt">£12,300</span><span class="pill"><span class="now">28 days late</span><span class="after">Paid</span></span></li>
+                  <li class="row row-stuck"><span class="inv">INV-1044</span><span class="amt">£1,560</span><span class="pill"><span class="now">Query open</span><span class="after">Paid</span></span></li>
+                  <li class="row row-stuck"><span class="inv">INV-1046</span><span class="amt">£4,875</span><span class="pill"><span class="now">Not signed off</span><span class="after">Paid</span></span></li>
+                </ol>
+                <div class="ledger-foot"><span>Still owed to you</span><span class="owed"><span class="now">£28,605</span><span class="after">£0</span></span></div>
+              </div>
+              <figcaption>Illustrative.</figcaption>
+            </figure>
+          </div>
+
+          <div class="stages">
+            <article class="stage" data-focus="late">
+              <span class="stage-word">Late.</span>
+              <p>Some invoices slip past their due date because nobody chased in time.</p>
+            </article>
+            <article class="stage" data-focus="stuck">
+              <span class="stage-word">Stuck.</span>
+              <p>Others can't be paid at all. A missing PO. An unanswered query. Work not signed off.</p>
+            </article>
+            <article class="stage" data-focus="cleared">
+              <span class="stage-word">Cleared.</span>
+              <p>We chase every week, find what's stuck and get it moving until it's paid.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="who" aria-labelledby="who-title">
+      <div class="wrap">
+        <span class="kicker">Who this is for</span>
+        <h2 id="who-title">Whether you turn over £500k or £5m, it's too much to keep in your head.</h2>
+        <p>We give credit control a structure: clear ownership, a set routine and the right tools. It happens every week, alongside your team or instead of them.</p>
+      </div>
+    </section>
+
+    <section class="partners" aria-labelledby="partners-title">
+      <div class="wrap">
+        <span class="kicker">For accountants and CFOs</span>
+        <h2 id="partners-title">You plan. We do.</h2>
+        <p class="closer">You set the strategy. We handle the doing: chasing invoices, forecasting cash, clearing blockers. Your clients get paid, and your plans get carried out.</p>
+        <div class="actions">
+          <a class="btn btn-secondary" href="mailto:Ash@remotefinancepartners.com?subject=Partnership%20enquiry">Talk about a partnership</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <span class="kicker">Talk to us</span>
+        <h2 id="contact-title">Stop flying blind on your cash.</h2>
+        <p>A 20-minute call. We'll ask how you get paid today and tell you where we'd start. If we're not the right fit, we'll say so.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
+          <a class="btn btn-outline-light" href="mailto:Ash@remotefinancepartners.com">Email Ash directly</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <strong>Remote Finance Partners</strong>
+      <div class="legal">
+        <a href="https://remotefinancepartners.com/privacy/">Privacy Policy</a>
+        <span>A trading name of Brilserve Ltd</span>
+        <span>Company No. 08590849</span>
+        <span>Registered in England &amp; Wales</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var grid = document.querySelector('.ledger');
+      var stages = document.querySelectorAll('.stage[data-focus]');
+      if (!grid || !('IntersectionObserver' in window)) return;
+      var wide = window.matchMedia('(min-width: 900px)');
+      var io = new IntersectionObserver(function (entries) {
+        if (!wide.matches) { grid.setAttribute('data-focus', 'all'); return; }
+        entries.forEach(function (e) {
+          if (e.isIntersecting) grid.setAttribute('data-focus', e.target.getAttribute('data-focus'));
+        });
+      }, { rootMargin: '-45% 0px -45% 0px' });
+      stages.forEach(function (st) { io.observe(st); });
+    })();
+  </script>
+</body>
+</html>
