@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy &amp; Cookie Policy — Remote Finance Partners</title>
+  <title>Privacy Policy | Remote Finance Partners</title>
   <meta name="description" content="Privacy and Cookie Policy for Remote Finance Partners, a trading name of Brilserve Ltd." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --navy:     #0B1F3B;
@@ -22,12 +22,17 @@
       --border:   #DDE3EA;
       --font-display: 'Playfair Display', Georgia, serif;
       --font-body:    'DM Sans', system-ui, sans-serif;
+      --green-dark: #17553F;
+      --paper: #FBFCFA;
+      --line: #C4D6CB;
+      --display: "Playfair Display", Georgia, "Times New Roman", serif;
+      --wrap: 1180px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
       font-family: var(--font-body);
-      background: var(--white);
+      background: var(--paper);
       color: var(--slate);
       font-size: 16px;
       line-height: 1.75;
@@ -35,44 +40,48 @@
     }
     a { color: inherit; text-decoration: none; }
 
-    /* NAV */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.97);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(10px);
-    }
-    .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-    }
-    .nav-logo img {
-      height: 40px;
-      width: auto;
-    }
-    .nav-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 8px 16px;
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.5rem; }
+    /* Buttons */
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+    .btn {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: .95rem 1.4rem;
       border-radius: 4px;
-      transition: all 0.15s;
+      border: 2px solid transparent;
+      transition: background-color .15s ease, color .15s ease;
     }
-    .nav-back:hover {
-      color: var(--navy);
-      border-color: var(--navy);
+    .btn-primary { background: var(--green); color: #fff; }
+    .btn-primary:hover { background: var(--green-dark); }
+    .btn-secondary { border-color: var(--navy); color: var(--navy); }
+    .btn-secondary:hover { background: var(--navy); color: #fff; }
+    .btn-light { background: var(--sage); color: var(--navy); }
+    .btn-light:hover { background: #fff; }
+    .btn-outline-light { border-color: var(--sage); color: #fff; }
+    .btn-outline-light:hover { background: var(--sage); color: var(--navy); }
+
+    /* Header and nav */
+    .site-header { border-bottom: 1px solid var(--line); background: var(--paper); color: var(--navy); }
+    .site-header .wrap {
+      display: flex; align-items: center; flex-wrap: wrap;
+      gap: .75rem 1.75rem; padding-top: 1rem; padding-bottom: 1rem;
     }
+    .wordmark {
+      font-family: var(--display); font-weight: 700; font-size: 1.35rem;
+      text-decoration: none; letter-spacing: -0.005em; margin-right: auto;
+    }
+    .site-nav { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    .site-nav a { text-decoration: none; font-weight: 600; font-size: .98rem; padding: .25rem 0; border-bottom: 2px solid transparent; }
+    .site-nav a:hover { color: var(--green); }
+    .site-nav a[aria-current="page"] { color: var(--green); border-bottom-color: var(--green); }
+    .site-header .btn { padding: .6rem 1rem; font-size: .95rem; white-space: nowrap; }
+    @media (max-width: 720px) {
+      .site-nav { order: 3; width: 100%; gap: 1.25rem; }
+    }
+    @media (max-width: 480px) { .wordmark { font-size: 1.15rem; line-height: 1.15; } }
+
 
     /* HERO STRIP */
     .page-hero {
@@ -273,65 +282,35 @@
       margin-bottom: 48px;
     }
 
-    /* FOOTER */
-    footer {
-      background: #080f1e;
-      padding: 40px 24px;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .footer-left {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.35);
-      line-height: 1.6;
-    }
-    .footer-left a {
-      color: rgba(255,255,255,0.45);
-      transition: color 0.15s;
-    }
-    .footer-left a:hover { color: rgba(215,231,221,0.8); }
-    .footer-right {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .footer-right a {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.45);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: color 0.15s;
-    }
-    .footer-right a:hover { color: var(--white); }
-    .footer-right svg { width: 15px; height: 15px; }
+    /* Footer */
+    .site-footer { background: var(--navy); color: var(--sage); padding: 2.5rem 0; font-size: .92rem; }
+    .site-footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; }
+    .site-footer strong { color: #fff; font-family: var(--display); font-weight: 700; font-size: 1.1rem; }
+    .legal { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
 
     @media (max-width: 600px) {
       .toc-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .site-header .wrap { column-gap: .6rem; }
+      .wordmark { font-size: 1.02rem; }
+      .site-header .btn { font-size: .82rem; padding: .5rem .7rem; }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="logo.png" alt="Remote Finance Partners" />
-      </a>
-      <a href="index.html" class="nav-back">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        Back to site
-      </a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/">Remote Finance Partners</a>
+      <ul class="site-nav" aria-label="Main">
+        <li><a href="/">Home</a></li>
+        <li><a href="/credit-control/">Credit control</a></li>
+        <li><a href="/resources/">Resources</a></li>
+      </ul>
+      <a class="btn btn-primary" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
     </div>
-  </nav>
+  </header>
 
   <div class="page-hero">
     <div class="page-hero-inner">
@@ -375,7 +354,7 @@
     <div class="doc-section">
       <span class="doc-section-anchor" id="what-we-collect"></span>
       <h2 class="doc-h2"><span class="section-num">Section 02</span>What Data We Collect and Why</h2>
-      <p><strong>a) Booking a Capacity Audit</strong><br />When you click to book a call, you are directed to Google Appointment Scheduling. Information you provide (name, email, any details you include) is collected and processed by Google on our behalf. We use this data solely to arrange and conduct the call with you.</p>
+      <p><strong>a) Booking an intro call</strong><br />When you click to book a call, you are directed to Google Appointment Scheduling. Information you provide (name, email, any details you include) is collected and processed by Google on our behalf. We use this data solely to arrange and conduct the call with you.</p>
       <p><strong>b) Business development and cold outreach</strong><br />We identify and contact potential clients through professional networking platforms, primarily LinkedIn. If we have contacted you, we believe our services may be relevant to your business. The data we hold is limited to your professional contact information sourced from publicly available professional profiles.</p>
       <div class="doc-highlight">
         <p>Our lawful basis for this processing is <strong>Legitimate Interests</strong> (Article 6(1)(f) UK GDPR). We have assessed that our interest in promoting our services to relevant businesses is not overridden by your interests or rights.</p>
@@ -398,7 +377,7 @@
       <h2 class="doc-h2"><span class="section-num">Section 04</span>Who We Share Your Data With</h2>
       <p>We do not sell your personal data. We may share it with:</p>
       <ul>
-        <li>Google LLC — for appointment scheduling. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+        <li>Google LLC, for appointment scheduling. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
         <li>Professional advisers or service providers who assist us in running our business, under appropriate data protection agreements.</li>
       </ul>
     </div>
@@ -453,7 +432,7 @@
       <div class="doc-highlight">
         <p>Our website does not use tracking or analytics cookies. We do not run Google Analytics or any advertising cookies.</p>
       </div>
-      <p>When you click to book a call, you are redirected to Google Appointment Scheduling. Google may set its own cookies as part of that service — these are outside our direct control. You can review how Google uses cookies at <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">policies.google.com/technologies/cookies</a>.</p>
+      <p>When you click to book a call, you are redirected to Google Appointment Scheduling. Google may set its own cookies as part of that service. These are outside our direct control. You can review how Google uses cookies at <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">policies.google.com/technologies/cookies</a>.</p>
     </div>
 
     <div class="doc-section">
@@ -468,26 +447,19 @@
 
     <div class="doc-section">
       <h2 class="doc-h2"><span class="section-num">Section 09e</span>Contact</h2>
-      <p>Questions about our use of cookies or this policy? Email us at <a href="mailto:Ash@remotefinancepartners.com">Ash@remotefinancepartners.com</a> — we'll respond within one month.</p>
+      <p>Questions about our use of cookies or this policy? Email us at <a href="mailto:Ash@remotefinancepartners.com">Ash@remotefinancepartners.com</a> and we'll respond within one month.</p>
     </div>
 
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-left">
-        Remote Finance Partners is a trading name of <strong style="color:rgba(255,255,255,0.5)">Brilserve Limited</strong> · Company No. 08590849 · Registered in England &amp; Wales<br />
-        Powered by <a href="https://financeadmin.net" target="_blank" rel="noopener">financeadmin.net</a>
-      </div>
-      <div class="footer-right">
-        <a href="index.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-          Back to main site
-        </a>
-        <a href="https://www.linkedin.com/company/remote-finance-partners/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
+  <footer class="site-footer">
+    <div class="wrap">
+      <strong>Remote Finance Partners</strong>
+      <div class="legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <span>A trading name of Brilserve Ltd</span>
+        <span>Company No. 08590849</span>
+        <span>Registered in England &amp; Wales</span>
       </div>
     </div>
   </footer>
