@@ -1,209 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Resources | Remote Finance Partners</title>
-<meta name="description" content="Notes on stock control, reconciliation and the admin behind multi-site merchants and depots. Written for operators who need the record to agree.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --navy:#0B1F3B;
-  --green:#1F6F54;
-  --green-dk:#175a43;
-  --sage:#D7E7DD;
-  --off:#F2F5F8;
-  --slate:#303F4A;
-  --muted:#6B7280;
-  --border:#DDE3EA;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:'DM Sans',system-ui,sans-serif;
-  color:var(--slate);
-  background:#fff;
-  font-size:17px;
-  line-height:1.62;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--navy);margin:0 0 .6em}
-h1{font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.12;font-weight:700;letter-spacing:-.01em}
-h2{font-size:clamp(1.45rem,2.8vw,1.95rem);line-height:1.2;font-weight:700}
-h3{font-size:1.1rem;font-weight:600;margin-bottom:.4em}
-p{margin:0 0 1.1em;max-width:68ch}
-a{color:var(--green)}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources | Remote Finance Partners</title>
+  <meta name="description" content="Practical notes on getting paid, seeing your cash and running a growing business.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1F3B;
+      --green: #1F6F54;
+      --green-dark: #17553F;
+      --sage: #D7E7DD;
+      --sage-light: #EEF5F0;
+      --paper: #FBFCFA;
+      --muted: #4A5A6A;
+      --line: #C4D6CB;
+      --font: "DM Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+      --display: "Playfair Display", Georgia, "Times New Roman", serif;
+      --wrap: 1180px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--navy);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.5rem; }
+    .skip {
+      position: absolute; left: -999px; top: 0;
+      background: var(--navy); color: #fff; padding: .75rem 1rem; z-index: 10;
+    }
+    .skip:focus { left: 1rem; top: 1rem; }
 
-.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--border)}
-.nav-inner{max-width:1340px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
-.brand{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--navy);text-decoration:none;font-size:1.1rem;margin-right:auto}
-.nav a.nav-link{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
-.nav a.nav-link:hover{color:var(--green)}
-.nav a.nav-link[aria-current="page"]{color:var(--green);font-weight:600}
-.pill{background:var(--green);color:#fff;text-decoration:none;padding:9px 18px;border-radius:999px;font-size:.9rem;font-weight:600;white-space:nowrap}
-.pill:hover{background:var(--green-dk)}
+    /* Type */
+    h1, h2, h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.005em;
+      margin: 0;
+    }
+    h1 { font-size: clamp(2.7rem, 7vw, 5.5rem); max-width: 14ch; }
+    h2 { font-size: clamp(2.1rem, 4.6vw, 3.5rem); max-width: 18ch; }
+    h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+    p { margin: 0 0 1em; max-width: 62ch; }
+    .kicker {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--green);
+      margin-bottom: .9rem;
+    }
+    .lede { font-size: clamp(1.15rem, 2vw, 1.35rem); line-height: 1.5; max-width: 40ch; }
 
-.wrap{max-width:1340px;margin:0 auto;padding:0 32px}
-section{padding:66px 0;border-top:1px solid var(--border)}
-section:first-of-type{border-top:0}
-.narrow{max-width:880px}
+    /* Buttons */
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+    .btn {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: .95rem 1.4rem;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      transition: background-color .15s ease, color .15s ease;
+    }
+    .btn-primary { background: var(--green); color: #fff; }
+    .btn-primary:hover { background: var(--green-dark); }
+    .btn-secondary { border-color: var(--navy); color: var(--navy); }
+    .btn-secondary:hover { background: var(--navy); color: #fff; }
+    .btn-light { background: var(--sage); color: var(--navy); }
+    .btn-light:hover { background: #fff; }
+    .btn-outline-light { border-color: var(--sage); color: #fff; }
+    .btn-outline-light:hover { background: var(--sage); color: var(--navy); }
 
-.band-off{background:var(--off);border-top:0}
-.band-off + section{border-top:0}
+    /* Header and nav */
+    .site-header { border-bottom: 1px solid var(--line); background: var(--paper); color: var(--navy); }
+    .site-header .wrap {
+      display: flex; align-items: center; flex-wrap: wrap;
+      gap: .75rem 1.75rem; padding-top: 1rem; padding-bottom: 1rem;
+    }
+    .wordmark {
+      font-family: var(--display); font-weight: 700; font-size: 1.35rem;
+      text-decoration: none; letter-spacing: -0.005em; margin-right: auto;
+    }
+    .site-nav { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    .site-nav a { text-decoration: none; font-weight: 600; font-size: .98rem; padding: .25rem 0; border-bottom: 2px solid transparent; }
+    .site-nav a:hover { color: var(--green); }
+    .site-nav a[aria-current="page"] { color: var(--green); border-bottom-color: var(--green); }
+    .site-header .btn { padding: .6rem 1rem; font-size: .95rem; white-space: nowrap; }
+    @media (max-width: 720px) {
+      .site-nav { order: 3; width: 100%; gap: 1.25rem; }
+    }
+    @media (max-width: 480px) { .wordmark { font-size: 1.15rem; line-height: 1.15; } }
 
-.hero{padding:84px 0 44px;border-top:0}
-.hero h1{max-width:16ch}
-.hero .standfirst{font-size:1.15rem;max-width:62ch}
+    /* Sections */
+    section { padding: clamp(4rem, 9vw, 7.5rem) 0; }
+    section h2 { margin-bottom: 1.5rem; }
 
-.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:.98rem;padding:13px 26px;border-radius:8px}
-.btn-primary{background:var(--green);color:#fff}
-.btn-primary:hover{background:var(--green-dk)}
-.btn-ghost{border:1.5px solid var(--border);color:var(--navy)}
-.btn-ghost:hover{border-color:var(--green);color:var(--green)}
+    /* Hero */
+    .hero { padding-top: clamp(3.5rem, 8vw, 6.5rem); padding-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .hero h1 { margin-bottom: 1.5rem; }
 
-/* ---- Article grid. Add one .res-card per article. ---- */
-.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
-.res-card{
-  display:flex;flex-direction:column;
-  background:#fff;border:1px solid var(--border);border-radius:10px;
-  padding:26px 24px;text-decoration:none;
-  transition:border-color .15s ease, transform .15s ease;
-}
-.res-card:hover{border-color:var(--green);transform:translateY(-2px)}
-.res-card .kicker{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
-.res-card h3{font-family:'Playfair Display',Georgia,serif;font-size:1.18rem;font-weight:700;line-height:1.28;margin-bottom:10px}
-.res-card p{font-size:.95rem;color:var(--slate);margin:0;max-width:none}
-.res-card .more{margin-top:16px;font-size:.9rem;font-weight:600;color:var(--green)}
+    /* Library */
+    .library { background: var(--sage-light); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .empty { border-left: 4px solid var(--green); padding-left: 1.5rem; max-width: 62ch; }
+    .empty h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 1rem; }
+    .empty p { font-size: 1.12rem; }
 
-/* ---- Empty state. Delete this block once you have cards. ---- */
-.empty{
-  background:var(--off);border-left:3px solid var(--green);
-  border-radius:0 10px 10px 0;padding:32px 34px;max-width:72ch;
-}
-.empty h3{font-family:'Playfair Display',Georgia,serif;font-size:1.25rem}
-.empty p:last-child{margin-bottom:0}
+    /* Article cards: one .res-card per article */
+    .res-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 800px) { .res-grid { grid-template-columns: repeat(3, 1fr); } }
+    .res-card {
+      display: flex; flex-direction: column; text-decoration: none;
+      background: var(--paper); border-top: 2px solid var(--navy); padding: 1.5rem 0 0;
+    }
+    .res-card .kicker { margin-bottom: .5rem; }
+    .res-card h3 { font-size: 1.5rem; margin-bottom: .75rem; }
+    .res-card p { color: var(--muted); margin: 0; }
+    .res-card .more { margin-top: 1rem; font-weight: 700; color: var(--green); }
+    .res-card:hover h3 { color: var(--green); }
 
-.cta{background:var(--navy);color:#fff;border-radius:14px;padding:48px 42px;margin:0 0 66px}
-.cta .label{color:var(--sage);font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
-.cta h2{color:#fff;max-width:22ch;margin-bottom:26px}
-.cta p{color:rgba(255,255,255,.85)}
-.cta .btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
-.cta .btn-ghost:hover{border-color:#fff}
-.cta .note{color:rgba(255,255,255,.72);font-size:.9rem;margin:20px 0 0}
+    /* Contact */
+    .contact { background: var(--green); color: #fff; }
+    .contact .kicker { color: var(--sage); }
+    .contact p { font-size: 1.2rem; }
 
-footer{border-top:1px solid var(--border);padding:28px 0 44px}
-.footer-inner{max-width:1340px;margin:0 auto;padding:0 32px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.footer-logo{font-family:'Playfair Display',Georgia,serif;font-weight:700;color:var(--navy)}
-.footer-meta{color:var(--muted);font-size:.85rem;text-align:right}
-.footer-meta a{color:var(--muted)}
-
-a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
-
-@media (max-width:1100px){
-  .res-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media (max-width:880px){
-  .res-grid{grid-template-columns:1fr}
-  .nav-inner{gap:16px;padding:14px 20px}
-  .wrap,.footer-inner{padding:0 20px}
-  .nav a.nav-link{font-size:.86rem}
-  section{padding:52px 0}
-  .hero{padding:58px 0 34px}
-  .cta{padding:34px 24px}
-  .empty{padding:26px 24px}
-  .footer-inner{flex-direction:column;align-items:flex-start}
-  .footer-meta{text-align:left}
-}
-</style>
+    /* Footer */
+    .site-footer { background: var(--navy); color: var(--sage); padding: 2.5rem 0; font-size: .92rem; }
+    .site-footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; }
+    .site-footer strong { color: #fff; font-family: var(--display); font-weight: 700; font-size: 1.1rem; }
+    .legal { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+    @media (max-width: 480px) {
+      .site-header .wrap { column-gap: .6rem; }
+      .wordmark { font-size: 1.02rem; }
+      .site-header .btn { font-size: .82rem; padding: .5rem .7rem; }
+    }
+  </style>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="/">Remote Finance Partners</a>
-     <a class="nav-link" href="/">Home</a>
-    <a class="nav-link" href="/credit-control/">Credit control</a>
-    <a class="nav-link" href="/resources/" aria-current="page">Resources</a>
-    <a class="pill" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="wrap">
-    <h1>Resources</h1>
-    <p class="standfirst">Working notes on stock control, reconciliation and the admin that sits behind multi-site merchants and depots. Written for the people who have to make the record agree, not for the people who write the software.</p>
-  </div>
-</section>
-
-<section class="band-off">
-  <div class="wrap">
-
-    <!-- ================================================================
-         EMPTY STATE
-         Delete this entire <div class="empty"> block once you have
-         added your first card below.
-         ================================================================ -->
-    <div class="empty">
-      <h3>New pieces are on the way</h3>
-      <p>We are rebuilding this section from the ground up. Practical write-ups on stock variance, cash reconciliation and depot process are being published here over the coming weeks.</p>
-      <p>If there is something specific you are wrestling with, it is usually quicker to just ask.</p>
-      <p><a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a Stock Control Review</a></p>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="/">Remote Finance Partners</a>
+      <ul class="site-nav" aria-label="Main">
+        <li><a href="/">Home</a></li>
+        <li><a href="/credit-control/">Credit control</a></li>
+        <li><a href="/resources/" aria-current="page">Resources</a></li>
+      </ul>
+      <a class="btn btn-primary" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
     </div>
+  </header>
 
-    <!-- ================================================================
-         ARTICLE GRID
-         To publish an article:
-           1. Create a folder:  /resources/your-article-slug/
-           2. Put an index.html inside it
-           3. Uncomment the grid below and copy a card for each article
-         ================================================================ -->
-    <!--
-    <div class="res-grid">
+  <main id="main">
 
-      <a class="res-card" href="/resources/your-article-slug/">
-        <div class="kicker">Stock control</div>
-        <h3>The headline of the article goes here</h3>
-        <p>One or two sentences describing what the reader gets out of it. Keep it to around twenty five words.</p>
-        <div class="more">Read &rarr;</div>
-      </a>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Resources</h1>
+        <p class="lede">Practical notes on getting paid, seeing your cash and running a business that has outgrown the owner's head.</p>
+      </div>
+    </section>
 
-      <a class="res-card" href="/resources/another-slug/">
-        <div class="kicker">Reconciliation</div>
-        <h3>Second article headline</h3>
-        <p>One or two sentences describing what the reader gets out of it.</p>
-        <div class="more">Read &rarr;</div>
-      </a>
+    <section class="library" aria-label="Articles">
+      <div class="wrap">
 
+        <!-- EMPTY STATE: delete this <div class="empty"> block once the first card below is live. -->
+        <div class="empty">
+          <h2>New pieces are on the way.</h2>
+          <p>We're writing practical notes on credit control, cash flow and the processes behind a growing business. They'll be published here over the coming weeks.</p>
+          <p>If something specific is on your mind, it's usually quicker to just ask.</p>
+        </div>
+
+        <!-- ARTICLE GRID
+             To publish an article:
+               1. Create a folder: /resources/your-article-slug/
+               2. Put an index.html inside it
+               3. Uncomment the grid below and copy a card for each article
+        <div class="res-grid">
+          <a class="res-card" href="/resources/your-article-slug/">
+            <span class="kicker">Credit control</span>
+            <h3>The headline of the article goes here</h3>
+            <p>One or two sentences on what the reader gets out of it.</p>
+            <span class="more">Read the article</span>
+          </a>
+        </div>
+        -->
+
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <span class="kicker">Talk to us</span>
+        <h2 id="contact-title">A straight conversation about what's not working.</h2>
+        <p>A 30-minute intro call. We'll ask how things run today and tell you where we'd start. If we're not the right fit, we'll say so.</p>
+        <div class="actions">
+          <a class="btn btn-light" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
+          <a class="btn btn-outline-light" href="mailto:Ash@remotefinancepartners.com">Email Ash directly</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <strong>Remote Finance Partners</strong>
+      <div class="legal">
+        <a href="/privacy.html">Privacy Policy</a>
+        <span>A trading name of Brilserve Ltd</span>
+        <span>Company No. 08590849</span>
+        <span>Registered in England &amp; Wales</span>
+      </div>
     </div>
-    -->
-
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="cta">
-      <div class="label">Start here</div>
-      <h2>Find out why your stock, cash and invoices do not agree</h2>
-      <p>A Stock Control Review maps how product and money actually move through your sites, then shows you where the record breaks. No new software and no new hire.</p>
-      <a class="btn btn-ghost" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a Stock Control Review</a>
-      <p class="note">One hour. No obligation.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-logo">Remote Finance Partners</div>
-    <div class="footer-meta">
-      <a href="/privacy/">Privacy Policy</a><br>
-      A trading name of Brilserve Ltd &middot; Company No. 08590849 &middot; Registered in England &amp; Wales
-    </div>
-  </div>
-</footer>
-
+  </footer>
 </body>
 </html>
