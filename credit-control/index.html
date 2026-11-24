@@ -91,7 +91,7 @@
     .btn-outline-light:hover { background: var(--sage); color: var(--navy); }
 
     /* Header and nav */
-    .site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+    .site-header { border-bottom: 1px solid var(--line); background: var(--paper); color: var(--navy); }
     .site-header .wrap {
       display: flex; align-items: center; flex-wrap: wrap;
       gap: .75rem 1.75rem; padding-top: 1rem; padding-bottom: 1rem;
@@ -158,7 +158,7 @@
     .note { margin-top: 2.5rem; font-weight: 700; }
     .what { border-top: 1px solid var(--line); }
 
-    /* Blockers (scroll-linked invoice grid, mirrors the homepage case study) */
+    /* Blockers (scroll-linked invoice list, mirrors the homepage case study) */
     .blockers { background: var(--navy); color: #fff; }
     .blockers .kicker { color: var(--sage); }
     .blockers-intro { margin-bottom: clamp(3rem, 6vw, 4.5rem); }
@@ -241,6 +241,11 @@
     .site-footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; }
     .site-footer strong { color: #fff; font-family: var(--display); font-weight: 700; font-size: 1.1rem; }
     .legal { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+    @media (max-width: 480px) {
+      .site-header .wrap { column-gap: .6rem; }
+      .wordmark { font-size: 1.02rem; }
+      .site-header .btn { font-size: .82rem; padding: .5rem .7rem; }
+    }
   </style>
 </head>
 <body>
@@ -254,7 +259,7 @@
         <li><a href="/credit-control/" aria-current="page">Credit control</a></li>
         <li><a href="/resources/">Resources</a></li>
       </ul>
-      <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
+      <a class="btn btn-primary" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
     </div>
   </header>
 
@@ -271,7 +276,7 @@
         </ul>
         <p class="byline"><img src="/ash-abraham.jpg" alt="Ash Abraham" width="44" height="44">Ash Abraham, Founder @ Remote Finance Partners</p>
         <div class="actions">
-          <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
+          <a class="btn btn-primary" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
           <a class="btn btn-secondary" href="#what-we-do">How it works</a>
         </div>
       </div>
@@ -410,9 +415,9 @@
       <div class="wrap">
         <span class="kicker">Talk to us</span>
         <h2 id="contact-title">Stop flying blind on your cash.</h2>
-        <p>A 20-minute call. We'll ask how you get paid today and tell you where we'd start. If we're not the right fit, we'll say so.</p>
+        <p>A 30-minute intro call. We'll ask how you get paid today and tell you where we'd start. If we're not the right fit, we'll say so.</p>
         <div class="actions">
-          <a class="btn btn-light" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
+          <a class="btn btn-light" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
           <a class="btn btn-outline-light" href="mailto:Ash@remotefinancepartners.com">Email Ash directly</a>
         </div>
       </div>
@@ -424,7 +429,7 @@
     <div class="wrap">
       <strong>Remote Finance Partners</strong>
       <div class="legal">
-        <a href="https://remotefinancepartners.com/privacy/">Privacy Policy</a>
+        <a href="/privacy.html">Privacy Policy</a>
         <span>A trading name of Brilserve Ltd</span>
         <span>Company No. 08590849</span>
         <span>Registered in England &amp; Wales</span>
