@@ -91,15 +91,20 @@
     .btn-outline-light:hover { background: var(--sage); color: var(--navy); }
 
     /* Header */
-    .site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
-    .site-header .wrap {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 1rem; padding-top: 1rem; padding-bottom: 1rem;
+        .site-header .wrap {
+      display: flex; align-items: center; flex-wrap: wrap;
+      gap: .75rem 1.75rem; padding-top: 1rem; padding-bottom: 1rem;
     }
     .wordmark {
       font-family: var(--display); font-weight: 700; font-size: 1.35rem;
-      text-decoration: none; letter-spacing: -0.005em;
+      text-decoration: none; letter-spacing: -0.005em; margin-right: auto;
     }
+    .site-nav { display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    .site-nav a { text-decoration: none; font-weight: 600; font-size: .98rem; padding: .25rem 0; border-bottom: 2px solid transparent; }
+    .site-nav a:hover { color: var(--green); }
+    .site-nav a[aria-current="page"] { color: var(--green); border-bottom-color: var(--green); }
+    @media (max-width: 720px) { .site-nav { order: 3; width: 100%; gap: 1.25rem; } }
+    
     .site-header .btn { padding: .6rem 1rem; font-size: .95rem; white-space: nowrap; }
     @media (max-width: 480px) { .wordmark { font-size: 1.15rem; line-height: 1.15; } }
 
@@ -244,7 +249,11 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="wordmark" href="/">Remote Finance Partners</a>
+            <ul class="site-nav" aria-label="Main">
+        <li><a href="/" aria-current="page">Home</a></li>
+        <li><a href="/credit-control/">Credit control</a></li>
+        <li><a href="/resources/">Resources</a></li>
+      </ul>
       <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
     </div>
   </header>
