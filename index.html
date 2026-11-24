@@ -91,7 +91,8 @@
     .btn-outline-light:hover { background: var(--sage); color: var(--navy); }
 
     /* Header */
-        .site-header .wrap {
+    .site-header { border-bottom: 1px solid var(--line); background: var(--paper); color: var(--navy); }
+    .site-header .wrap {
       display: flex; align-items: center; flex-wrap: wrap;
       gap: .75rem 1.75rem; padding-top: 1rem; padding-bottom: 1rem;
     }
@@ -104,7 +105,6 @@
     .site-nav a:hover { color: var(--green); }
     .site-nav a[aria-current="page"] { color: var(--green); border-bottom-color: var(--green); }
     @media (max-width: 720px) { .site-nav { order: 3; width: 100%; gap: 1.25rem; } }
-    
     .site-header .btn { padding: .6rem 1rem; font-size: .95rem; white-space: nowrap; }
     @media (max-width: 480px) { .wordmark { font-size: 1.15rem; line-height: 1.15; } }
 
@@ -242,6 +242,11 @@
     .site-footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; }
     .site-footer strong { color: #fff; font-family: var(--display); font-weight: 700; font-size: 1.1rem; }
     .legal { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+    @media (max-width: 480px) {
+      .site-header .wrap { column-gap: .6rem; }
+      .wordmark { font-size: 1.02rem; }
+      .site-header .btn { font-size: .82rem; padding: .5rem .7rem; }
+    }
   </style>
 </head>
 <body>
@@ -249,12 +254,13 @@
 
   <header class="site-header">
     <div class="wrap">
-            <ul class="site-nav" aria-label="Main">
+      <a class="wordmark" href="/">Remote Finance Partners</a>
+      <ul class="site-nav" aria-label="Main">
         <li><a href="/" aria-current="page">Home</a></li>
         <li><a href="/credit-control/">Credit control</a></li>
         <li><a href="/resources/">Resources</a></li>
       </ul>
-      <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
+      <a class="btn btn-primary" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
     </div>
   </header>
 
@@ -269,11 +275,11 @@
           <li>Every site running the same way</li>
           <li>No single point of failure</li>
         </ul>
-       <p class="byline"><img src="ash-abraham.jpg" alt="Ash Abraham" width="44" height="44">Ash Abraham, Founder @ Remote Finance Partners</p>
+       <p class="byline"><img src="/ash-abraham.jpg" alt="Ash Abraham" width="44" height="44">Ash Abraham, Founder @ Remote Finance Partners</p>
         <p class="promise">No new software. No new hires. No long-term dependency on us.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
-          <a class="btn btn-secondary" href="#what-we-do">How we work</a>
+          <a class="btn btn-primary" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
+          <a class="btn btn-secondary" href="#what-we-do">How it works</a>
         </div>
       </div>
     </section>
@@ -412,7 +418,7 @@
                 <li>Notes were written in seven different formats across ten yards.</li>
               </ul>
               <div class="actions">
-                <a class="btn btn-light" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book your audit</a>
+                <a class="btn btn-light" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
               </div>
             </article>
 
@@ -423,7 +429,7 @@
               <p>We shadowed the daily routine end to end before changing anything. Then we wrote a procedure the yards actually work to: one recording convention, a standard yard sheet, a daily cut-off, and the judgement calls written down alongside the steps.</p>
               <p class="emph">No new software. Just a simple file that records a transfer as a transfer.</p>
               <div class="actions">
-                <a class="btn btn-light" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Review your workload</a>
+                <a class="btn btn-light" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
               </div>
             </article>
 
@@ -434,7 +440,7 @@
               <p class="emph">The routine now runs to a written standard, and more than one person can run it.</p>
               <p>We now provide their daily reconciliation, exception management and reporting, with eight measures baselined at the start and reported monthly.</p>
               <div class="actions">
-                <a class="btn btn-light" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Explore your roadmap</a>
+                <a class="btn btn-light" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
               </div>
             </article>
           </div>
@@ -445,7 +451,7 @@
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="wrap">
         <div>
-          <img class="portrait" src="ash-abraham.jpg" alt="Ash Abraham, founder of Remote Finance Partners" width="240" height="240" loading="lazy">
+          <img class="portrait" src="/ash-abraham.jpg" alt="Ash Abraham, founder of Remote Finance Partners" width="240" height="240" loading="lazy">
           <p class="portrait-caption">Ash Abraham<span>Founder, Remote Finance Partners</span></p>
         </div>
         <div>
@@ -472,9 +478,9 @@
       <div class="wrap">
         <span class="kicker">Talk to us</span>
         <h2 id="contact-title">A straight conversation about what's not working.</h2>
-        <p>If we're not the right fit, we'll say so. Either way, you'll leave knowing where to look first.</p>
+        <p>A 30-minute intro call. If we're not the right fit, we'll say so. Either way, you'll leave knowing where to look first.</p>
         <div class="actions">
-          <a class="btn btn-light" href="https://calendar.app.google/qsJJP8EKTiM5gGce9">Book a call</a>
+          <a class="btn btn-light" href="https://calendar.app.google/TVanDkYEdQWnCiaS9">Book an intro call</a>
           <a class="btn btn-outline-light" href="mailto:Ash@remotefinancepartners.com">Email Ash directly</a>
         </div>
       </div>
@@ -486,7 +492,7 @@
     <div class="wrap">
       <strong>Remote Finance Partners</strong>
       <div class="legal">
-        <a href="https://remotefinancepartners.com/privacy/">Privacy Policy</a>
+        <a href="/privacy.html">Privacy Policy</a>
         <span>A trading name of Brilserve Ltd</span>
         <span>Company No. 08590849</span>
         <span>Registered in England &amp; Wales</span>
